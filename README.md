@@ -16,22 +16,22 @@
 -  前端安全相关问题  https://mp.weixin.qq.com/s/tgIWXcfzswcKcKcb-Dzt_g
 -  MVC和MVVM的区别  
 -  简单讲解下vue2原理，是否有了解vue3的变化  
--  vuex原理和为什么要使用以及状态持久化(可通过写store plugins做存储)  
+-  vuex原理和为什么要使用以及状态持久化(可通过store plugins做存储，indexDb之类)  
 -  vue-router原理  
 -  VNode的理解  
--  高阶组件(函数)  
+-  函数式编程(高阶函数)  
 -  webpack js分包的操作  
 -  ssr，pwa的了解  
 -  electron的了解  
 -  koa2的原理，是否了解其他的框架？(不局限于nodejs)  
--  HTTP协议有哪些  
+-  TCP,HTTP,WebSocket的关系于异同，HTTP协议有哪些  https://blog.csdn.net/sinat_31057219/article/details/72872359
 -  GET和POST区别  https://segmentfault.com/a/1190000018129846
 -  浏览器重绘和重排  
 -  谈谈函数式编程  
 -  解释下call，apply和bind用法  http://web.jobbole.com/83642/  
 -  谈谈mpvue，taro，原生小程序等等经验  
 -  RN，flutter，ionic的了解和实践  
--  什么是跨域？前端跨域有哪些处理方法？  
+-  什么是跨域？前端跨域有哪些处理方法？(相同的域，相同的端口，相同的协议; CORS, new Image, document.domain, Jsonp, postMessage)  
 -  GraphQL的了解  
 -  Docker相关的了解  
 -  Nginx相关的了解  
@@ -47,4 +47,5 @@
 -  前端代码开发完成，咱们是先上线页面，还是先上线静态资源？（消息摘要算法）  
 -  谈谈带团队，跟项目的经验  
 -  IQ题和EQ题  
--  有无开源作品
+-  有无开源作品  
+-  有无做过分享
