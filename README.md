@@ -25,10 +25,10 @@
 -  electron的了解  
 -  koa2的原理，是否了解其他的框架？(不局限于nodejs)  
 -  HTTP协议有哪些  
--  GET和POST区别  
+-  GET和POST区别  https://segmentfault.com/a/1190000018129846
 -  浏览器重绘和重排  
 -  谈谈函数式编程  
--  解释下call，apply和bind用法  
+-  解释下call，apply和bind用法  http://web.jobbole.com/83642/  
 -  谈谈mpvue，taro，原生小程序等等经验  
 -  RN，flutter，ionic的了解和实践  
 -  什么是跨域？前端跨域有哪些处理方法？  
@@ -47,3 +47,4 @@
 -  前端代码开发完成，咱们是先上线页面，还是先上线静态资源？（消息摘要算法）  
 -  谈谈带团队，跟项目的经验  
 -  IQ题和EQ题  
+-  有无开源作品
