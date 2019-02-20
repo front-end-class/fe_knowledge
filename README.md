@@ -16,7 +16,7 @@
 -  前端安全相关问题  https://mp.weixin.qq.com/s/tgIWXcfzswcKcKcb-Dzt_g
 -  MVC和MVVM的区别  
 -  简单讲解下vue2原理，是否有了解vue3的变化  
--  vuex原理和为什么要使用以及状态持久化(可通过store plugins做存储，IndexedDB之类)  
+-  vuex原理和为什么要使用以及状态持久化(可通过store plugins做存储，[IndexedDB](http://www.ruanyifeng.com/blog/2018/07/indexeddb.html)之类)  
 -  vue-router原理  (基于Hash和History API)
 -  VNode的理解  
 -  函数式编程([高阶函数，高阶组件](https://blog.csdn.net/mapbar_front/article/details/79697863))  
