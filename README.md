@@ -17,9 +17,9 @@
 -  MVC和MVVM的区别  
 -  简单讲解下vue2原理，是否有了解vue3的变化  
 -  vuex原理和为什么要使用以及状态持久化(可通过store plugins做存储，IndexedDB之类)  
--  vue-router原理  
+-  vue-router原理  (基于Hash和History API)
 -  VNode的理解  
--  函数式编程(高阶函数)  
+-  函数式编程([高阶函数，高阶组件](https://blog.csdn.net/mapbar_front/article/details/79697863))  
 -  webpack js分包的操作  
 -  ssr，pwa的了解  
 -  electron的了解  
