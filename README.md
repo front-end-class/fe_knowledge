@@ -13,7 +13,7 @@
 -  了解哪些数据结构和算法  
 -  前端性能优化，长列表如何优化  
 -  前端缓存  
--  前端安全相关问题  
+-  前端安全相关问题  https://mp.weixin.qq.com/s/tgIWXcfzswcKcKcb-Dzt_g
 -  MVC和MVVM的区别  
 -  简单讲解下vue2原理，是否有了解vue3的变化  
 -  vuex原理和为什么要使用以及状态持久化(可通过写store plugins做存储)  
