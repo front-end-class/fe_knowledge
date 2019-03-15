@@ -11,7 +11,7 @@
 -  js异步都有哪些，延伸Promise.all和Promise.race用法  
 -  for in，for of，Object.keys和Object.getOwnPropertyNames的区别  
 -  了解哪些数据结构和算法  
--  前端性能优化，长列表如何优化  
+-  前端性能优化，长列表如何优化  https://juejin.im/post/5b960fcae51d450e9d645c5f
 -  前端缓存  
 -  前端安全相关问题  https://mp.weixin.qq.com/s/tgIWXcfzswcKcKcb-Dzt_g
 -  MVC和MVVM的区别  
