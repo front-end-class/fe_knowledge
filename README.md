@@ -27,6 +27,7 @@
 -  VNode的理解  
 -  keep-alive的理解 (用来对组件进行缓存，从而节省性能，由于是一个抽象组件，所以在页面渲染完毕后不会被渲染成一个DOM元素,例如页面的切换不再刷新，钩子的触发顺序created-> mounted-> activated，退出时触发deactivated。当再次进入（前进或者后退）时，只触发activated。)  
 -  函数式编程([高阶函数，高阶组件](https://blog.csdn.net/mapbar_front/article/details/79697863))  
+-  装饰器与高阶组件 https://blog.csdn.net/weixin_34268843/article/details/88590661
 -  webpack js分包的操作  
 -  ssr，pwa的了解  
 -  electron(electron-vue)的了解 (基于h5技术开发的混合桌面应用 http://electronjs.org/docs) 
