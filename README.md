@@ -35,7 +35,7 @@
 -  TCP,HTTP,WebSocket的关系于异同，HTTP协议有哪些  https://blog.csdn.net/sinat_31057219/article/details/72872359
 -  GET和POST区别  https://segmentfault.com/a/1190000018129846
 -  浏览器重绘和重排 https://mp.weixin.qq.com/s/doGi80RRf1LZ3IevHzM3xA    
--  谈谈函数式编程  
+-  柯里化 https://cloud.tencent.com/developer/article/1356699  
 -  解释下call，apply和bind用法 (都可以改变上下文，前两者传参方式不同，而且调用立即执行，但bind并不会 http://web.jobbole.com/83642/)    
 -  谈谈mpvue，taro，原生小程序等等经验 (分别基于vue和react语法，方便h5复用某些组件结构逻辑(按照我们的经验，大概有50%可以复用，调整的细节还是不少)，快速迁移到小程序) 
 -  RN，flutter，ionic的了解和实践  
