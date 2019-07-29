@@ -3,7 +3,7 @@
 ### JavaScript
 -  数据类型和引用类型(深浅拷贝，堆栈问题)  
 -  节流和防抖  https://segmentfault.com/a/1190000016261602 
--  解释prototype和__proto__的区别  
+-  解释prototype和__proto__的区别 https://www.cnblogs.com/myfirstboke/p/10449272.html  https://www.cnblogs.com/shamoyuu/p/prototype.html 
 -  new()到底做了些什么  https://www.jianshu.com/p/e7015984f608
 -  闭包原理和作用  
 -  观察者模式和发布订阅模式区别  
