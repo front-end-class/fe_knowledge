@@ -1,4 +1,4 @@
-# 我也来整理一份前端基础知识(面试题)，不断更新并补上对应的答案
+# 我也来整理一份前端基础知识(面试题)，不断更新并补上对应的文章(答案)
 
 ### JavaScript
 -  数据类型和引用类型(深浅拷贝，堆栈问题)  
@@ -20,7 +20,7 @@
 -  for in，for of，Object.keys和Object.getOwnPropertyNames的区别  
 -  了解哪些数据结构和算法  
 -  前端性能优化，长列表如何优化  https://juejin.im/post/5b960fcae51d450e9d645c5f
--  前端缓存  
+-  前端缓存，浏览器缓存  https://mp.weixin.qq.com/s/Q2h1EEKubAXkaM4g85Mkrw  
 -  前端安全相关问题  https://mp.weixin.qq.com/s/tgIWXcfzswcKcKcb-Dzt_g
 -  MVC和MVVM的区别  
 -  简单讲解下vue2原理，是否有了解vue3的变化 (最主要就是数据劫持，object.defineProperty需要遍历对象的属性作操作，proxy是拦截当前对象作操作。还有其他待补充) 
