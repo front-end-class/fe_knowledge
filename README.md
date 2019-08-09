@@ -21,7 +21,7 @@
 -  了解哪些数据结构和算法  
 -  前端性能优化，长列表如何优化  https://juejin.im/post/5b960fcae51d450e9d645c5f
 -  前端缓存，浏览器缓存  https://mp.weixin.qq.com/s/Q2h1EEKubAXkaM4g85Mkrw  
--  前端安全相关问题  https://mp.weixin.qq.com/s/tgIWXcfzswcKcKcb-Dzt_g
+-  前端安全相关问题  https://mp.weixin.qq.com/s/tgIWXcfzswcKcKcb-Dzt_g https://juejin.im/post/5bad9140e51d450e935c6d64
 -  MVC和MVVM的区别  
 -  简单讲解下vue2原理，是否有了解vue3的变化 (最主要就是数据劫持，object.defineProperty需要遍历对象的属性作操作，proxy是拦截当前对象作操作。还有其他待补充) 
 -  vuex原理和为什么要使用以及状态持久化(vuex在vue里当作插件引入，并且被数据劫持。持久化可通过store plugins做存储，[vuex-persistedstate](https://github.com/robinvdvleuten/vuex-persistedstate), [IndexedDB](http://www.ruanyifeng.com/blog/2018/07/indexeddb.html)之类)  
