@@ -56,6 +56,8 @@
 -  BEM  
 -  盒子模型
 
+## 实用代码
+-  [JavaScript实现base64编码解码](https://www.cnblogs.com/mofish/archive/2012/02/25/2367858.html)
 
 ## 其他
 -  前端代码开发完成，咱们是先上线页面，还是先上线静态资源？（消息摘要算法，http://web.jobbole.com/93678/)   
