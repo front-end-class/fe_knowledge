@@ -68,4 +68,7 @@
 -  有无做过分享
 -  开发风格 (https://cn.vuejs.org/v2/style-guide/index.html)  
 -  前端技术架构 (技术架构不是面向具体功能的，而是面向业务开发团队的需求，解决开发共性，简化开发流程。 https://mp.weixin.qq.com/s/QKWhFSqs8Qa8AxQsZZns9w https://mp.weixin.qq.com/s/v_tP-tiH327gwWliBHqT1A )  
+-  moment.js 打包时的问题和处理
+-  线上前端项目首屏静态资源 gzip 后的体积是多少
+
 
