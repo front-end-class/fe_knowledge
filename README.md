@@ -30,7 +30,7 @@
 -  keep-alive的理解 (用来对组件进行缓存，从而节省性能，由于是一个抽象组件，所以在页面渲染完毕后不会被渲染成一个DOM元素,例如页面的切换不再刷新，钩子的触发顺序created-> mounted-> activated，退出时触发deactivated。当再次进入（前进或者后退）时，只触发activated。)  
 -  函数式编程([高阶函数，高阶组件](https://blog.csdn.net/mapbar_front/article/details/79697863))  
 -  装饰器模式 https://segmentfault.com/a/1190000018277217  
--  webpack js分包的操作  
+-  webpack js分包的操作，它是如何压缩前端代码  
 -  ssr，pwa的了解  
 -  electron(electron-vue)的了解 (基于h5技术开发的混合桌面应用 http://electronjs.org/docs) 
 -  koa2的原理，是否了解其他的框架？(不局限于nodejs)  
@@ -70,5 +70,4 @@
 -  前端技术架构 (技术架构不是面向具体功能的，而是面向业务开发团队的需求，解决开发共性，简化开发流程。 https://mp.weixin.qq.com/s/QKWhFSqs8Qa8AxQsZZns9w https://mp.weixin.qq.com/s/v_tP-tiH327gwWliBHqT1A )  
 -  moment.js 打包时的问题和处理
 -  线上前端项目首屏静态资源 gzip 后的体积是多少
-
 
