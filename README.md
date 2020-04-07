@@ -48,6 +48,7 @@
 -  webGl相关的了解  
 -  typescript相关的了解
 -  rxjs相关的了解
+-  [isNaN与Number.isNaN的区别](https://blog.csdn.net/zforler/article/details/88074075)
 
 ## CSS
 -  BFC  
