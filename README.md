@@ -1,8 +1,8 @@
 # 前端基础知识(面试题)，不断更新并补上对应的文章(答案)
 
 ### JavaScript
--  数据类型和引用类型(深浅拷贝，堆栈问题)  
--  深浅拷贝实则是一种递归算法，可以利用 weakMap 弱引用来存储防止爆栈  
+-  数据类型和引用类型(深浅拷贝，堆栈问题)   
+-  深浅拷贝实则是一种递归算法，可以利用 weakMap 弱引用来存储防止爆栈  https://juejin.im/post/5d6aa4f96fb9a06b112ad5b1
 -  节流和防抖  https://segmentfault.com/a/1190000016261602 
 -  解释prototype和__proto__的区别 https://www.cnblogs.com/myfirstboke/p/10449272.html  https://www.cnblogs.com/shamoyuu/p/prototype.html 
 -  new()到底做了些什么  https://www.jianshu.com/p/e7015984f608
