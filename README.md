@@ -49,6 +49,7 @@
 -  typescript相关的了解
 -  rxjs相关的了解
 -  [isNaN与Number.isNaN的区别](https://blog.csdn.net/zforler/article/details/88074075)
+-  [exports和module.exports的区别](https://juejin.im/post/5d5639c7e51d453b5c1218b4)
 
 ## CSS
 -  BFC  
