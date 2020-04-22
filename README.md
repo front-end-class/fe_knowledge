@@ -16,10 +16,10 @@
 
        obj.__proto__ = Con.prototype;//实例的隐式原型指向构造函数原型，
 
-       Con.apply(obj, arguments);
+       let result = Con.apply(obj, arguments);
        //使用 apply，改变构造函数 this 的指向到新建的对象，这样 obj 就可以访问到构造函数中的属性
 
-       return obj; //返回该对象
+       return typeof result === 'object' ? result : obj; //返回该对象
    };
    
    newObject(Person, 'name', 'age')
