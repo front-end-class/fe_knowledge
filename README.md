@@ -1,11 +1,12 @@
 # 前端基础知识(面试题)，不断更新并补上对应的文章(答案)
 
 ### JavaScript
+-  [this详解](http://www.inode.club/webframe/javascript/this.html)
 -  数据类型和引用类型(深浅拷贝，堆栈问题)   
 -  深浅拷贝实则是一种递归算法，可以利用 weakMap 弱引用来存储防止爆栈  https://juejin.im/post/5d6aa4f96fb9a06b112ad5b1
--  节流和防抖  https://segmentfault.com/a/1190000016261602 
+-  [节流和防抖](https://segmentfault.com/a/1190000016261602)   
 -  解释prototype和__proto__的区别 https://www.cnblogs.com/myfirstboke/p/10449272.html  https://www.cnblogs.com/shamoyuu/p/prototype.html 
--  new()到底做了些什么  https://www.jianshu.com/p/e7015984f608
+-  [new()到底做了些什么](https://www.jianshu.com/p/e7015984f608)  
 -  闭包原理和作用  
 -  观察者模式和发布订阅模式区别 [详细讲解发布订阅模式](https://juejin.im/post/5d69eef7f265da03f12e70a5) 
 -  事件模型(浏览器区别，事件代理，内存问题)  
@@ -20,8 +21,8 @@
 -  js异步都有哪些，延伸Promise.all和Promise.race用法  
 -  for in，for of，Object.keys和Object.getOwnPropertyNames的区别  
 -  了解哪些数据结构和算法  
--  前端性能优化，长列表如何优化  https://juejin.im/post/5b960fcae51d450e9d645c5f
--  前端缓存，浏览器缓存  https://mp.weixin.qq.com/s/Q2h1EEKubAXkaM4g85Mkrw  
+-  [前端性能优化，长列表如何优化](https://juejin.im/post/5b960fcae51d450e9d645c5f)  
+-  [前端缓存，浏览器缓存](https://mp.weixin.qq.com/s/Q2h1EEKubAXkaM4g85Mkrw)    
 -  前端安全相关问题  https://mp.weixin.qq.com/s/tgIWXcfzswcKcKcb-Dzt_g https://juejin.im/post/5bad9140e51d450e935c6d64
 -  MVC和MVVM的区别  
 -  简单讲解下vue2原理，是否有了解vue3的变化 (最主要就是数据劫持，object.defineProperty需要遍历对象的属性作操作，proxy是拦截当前对象作操作。还有其他待补充) 
