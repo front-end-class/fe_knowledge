@@ -7,6 +7,23 @@
 -  [节流和防抖](https://segmentfault.com/a/1190000016261602)   
 -  解释prototype和__proto__的区别 https://www.cnblogs.com/myfirstboke/p/10449272.html  https://www.cnblogs.com/shamoyuu/p/prototype.html 
 -  [new()到底做了些什么](https://www.jianshu.com/p/e7015984f608)  
+   ```js
+   function newObject() {
+
+       let obj = {}; //创建 一个新对象
+
+       Con = [].shift.call(arguments); //shift方法去除数组第一个元素，并返回第一个元素
+
+       obj.__proto__ = Con.prototype;//实例的隐式原型指向构造函数原型，
+
+       Con.apply(obj, arguments);
+       //使用 apply，改变构造函数 this 的指向到新建的对象，这样 obj 就可以访问到构造函数中的属性
+
+       return obj; //返回该对象
+   };
+   
+   newObject(Person, 'name', 'age')
+   ```
 -  闭包原理和作用  
 -  观察者模式和发布订阅模式区别 [详细讲解发布订阅模式](https://juejin.im/post/5d69eef7f265da03f12e70a5) 
 -  事件模型(浏览器区别，事件代理，内存问题)  
