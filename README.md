@@ -108,6 +108,29 @@
 -  [浏览器系列之 Cookie 和 SameSite 属性](https://github.com/mqyqingfeng/Blog/issues/157)  
 -  [关于 Uniapp](https://juejin.im/book/5da9d16c5188254796427201)
 -  [数组去重](https://juejin.im/post/5ceebfe4f265da1bb96fc09c#heading-0)
+-  a==1&&a==2&&a==3
+   ```js
+   let i = 1
+   let a = new Proxy({},{
+
+     get: function(){
+
+       return () => i++
+     }
+   })
+
+   console.log(a==1&&a==2&&a==3&&a==4)
+
+
+   let b = [1,2,3]
+
+   b.join = b.shift
+
+   console.log(b==1&&b==2&&b==3)
+
+   
+   ```
+
 
 ## CSS
 -  BFC  
