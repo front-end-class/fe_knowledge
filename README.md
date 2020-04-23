@@ -1,6 +1,7 @@
 # 前端基础知识(面试题)，不断更新并补上对应的文章(答案)
 
 ### JavaScript
+-  let、const、var 的区别有哪些？- var可变量提升，可重复声明，无暂存死区，无块级作用域  
 -  [this详解](http://www.inode.club/webframe/javascript/this.html)
 -  数据类型和引用类型(深浅拷贝，堆栈问题)   
 -  深浅拷贝实则是一种递归算法，可以利用 weakMap 弱引用来存储防止爆栈  https://juejin.im/post/5d6aa4f96fb9a06b112ad5b1
