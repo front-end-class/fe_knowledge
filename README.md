@@ -109,6 +109,9 @@
 -  [关于 Uniapp](https://juejin.im/book/5da9d16c5188254796427201)
 -  [数组去重](https://juejin.im/post/5ceebfe4f265da1bb96fc09c#heading-0)
 -  flat扁平化 
+   ```js
+   [1, [2, [3, [4]], 5]].flat(Math.pow(2, 53) - 1)
+   ```
 -  a==1&&a==2&&a==3
    ```js
    let i = 1
