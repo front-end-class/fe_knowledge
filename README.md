@@ -67,7 +67,33 @@
    }
    console.log(curry(add)(1,2,3))
    ```
--  解释下call，apply和bind用法 (都可以改变上下文，前两者传参方式不同，而且调用立即执行，但bind并不会 http://web.jobbole.com/83642/)    
+-  解释下call，apply和bind用法 (都可以改变上下文，前两者传参方式不同，而且调用立即执行，但bind并不会 http://web.jobbole.com/83642/)  
+   ```js
+   // 模拟 call 原理
+   Function.prototype.callMock = function(){
+       let [self, ...args] = [...arguments]
+      
+       //如果没有this，在浏览器中代表window，node.js代表global
+       if(!self) self = typeof window === 'undefined' ? global : window
+
+       self.fn = this //把当前方法（this）挂载在 self 作用域某个属性上
+
+       let rest = self.fn(...args)
+       delete self.fn // 移除属性
+       return rest
+   }
+
+   const fullName = function() {
+     		 console.log(this.firstName+this.lastName)
+   }
+   var person = {
+       firstName:"mon",
+       lastName: "w3c",
+   }
+
+   fullName.callMock(person); 
+
+   ```
 -  谈谈mpvue，taro，uniapp，原生小程序等等经验 (分别基于vue和react语法，方便h5复用某些组件结构逻辑(按照我们的经验，大概有50%可以复用，调整的细节还是不少)，快速迁移到小程序) ，踩坑及解决方法  
 -  RN，ionic，flutter的了解和实践  
 -  什么是跨域？前端跨域有哪些处理方法？(相同的域，相同的端口，相同的协议; CORS, new Image, document.domain, Jsonp, postMessage)  
