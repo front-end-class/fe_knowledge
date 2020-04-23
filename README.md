@@ -57,6 +57,16 @@
 -  GET和POST区别  https://segmentfault.com/a/1190000018129846
 -  浏览器重绘和重排 https://mp.weixin.qq.com/s/doGi80RRf1LZ3IevHzM3xA    
 -  柯里化 https://cloud.tencent.com/developer/article/1356699  
+   ```js
+   const curry = (fn, ...args) => {
+      return args.length < fn.length ? (...ar) => curry(fn,...args,...ar): fn(...args)
+   }
+
+   function add(a,d,c){
+      return a+d+c 
+   }
+   console.log(curry(add)(1,2,3))
+   ```
 -  解释下call，apply和bind用法 (都可以改变上下文，前两者传参方式不同，而且调用立即执行，但bind并不会 http://web.jobbole.com/83642/)    
 -  谈谈mpvue，taro，uniapp，原生小程序等等经验 (分别基于vue和react语法，方便h5复用某些组件结构逻辑(按照我们的经验，大概有50%可以复用，调整的细节还是不少)，快速迁移到小程序) ，踩坑及解决方法  
 -  RN，ionic，flutter的了解和实践  
