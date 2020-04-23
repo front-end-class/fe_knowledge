@@ -111,6 +111,19 @@
 
 ## CSS
 -  BFC  
+   ```html
+   创建BFC
+   + 根元素
+   + 浮动元素（float 属性不为 none）
+   + position 为 absolute 或 fixed
+   + overflow 不为 visible 的块元素
+   + display 为 inline-block, table-cell, table-caption
+   
+   作用
+   + 防止边距重叠
+   + 清除内部浮动
+   ```
+   
 -  flex布局  
 -  动画  
 -  BEM  
