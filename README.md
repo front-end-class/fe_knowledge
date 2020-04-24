@@ -3,7 +3,11 @@
 ### JavaScript
 -  let、const、var 的区别有哪些？- var可变量提升，可重复声明，无暂存死区，无块级作用域  
 -  [this详解](http://www.inode.club/webframe/javascript/this.html)
--  数据类型和引用类型(深浅拷贝，堆栈问题)   
+-  数据类型和引用类型(深浅拷贝，堆栈问题) 
+   + string 、number 、boolean 和 null undefined 这五种类型统称为原始类型（Primitive），表示不能再细分下去的基本类型;
+   + symbol 是ES6中新增的数据类型，symbol 表示独一无二的值，通过 Symbol 函数调用生成，由于生成的 symbol 值为原始类型，所以 Symbol 函数不能使用new 调用；
+   + object 属于引用类型，array 和 function 是 object 的子类型。对象在逻辑上是属性的无序集合，是存放各种值的容器。对象值存储在堆的是引用地址，所以对象值是可变的。
+
 -  深浅拷贝实则是一种递归算法，可以利用 weakMap 弱引用来存储防止爆栈  https://juejin.im/post/5d6aa4f96fb9a06b112ad5b1
 -  [节流和防抖](https://segmentfault.com/a/1190000016261602)   
 -  解释prototype和__proto__的区别 https://www.cnblogs.com/myfirstboke/p/10449272.html  https://www.cnblogs.com/shamoyuu/p/prototype.html 
