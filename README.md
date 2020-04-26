@@ -43,6 +43,21 @@
    ```
 -  闭包原理和作用  
    + 函数里的子函数，该函数可以是匿名函数，该子函数能够读写父函数的局部变量。
+   ```js
+   // 经典问题：
+   for ( var i=1; i<=5; i++) {
+      setTimeout( function timer() {
+         console.log( i );
+      }, i*1000 );
+   }
+   
+   // 利用 setTimeout 的第三个参数，给第一个函数传递参数
+   for ( var i=1; i<=5; i++) {
+      setTimeout( function timer(j) {
+         console.log( j );
+      }, i*1000, i);
+   }
+   ```
 -  观察者模式和发布订阅模式区别 [详细讲解发布订阅模式](https://juejin.im/post/5d69eef7f265da03f12e70a5) 
 -  事件模型(浏览器区别，事件代理，内存问题)  
 -  垃圾回收和内存泄露   https://juejin.im/post/5d0706a6f265da1bc23f77a9  https://blog.csdn.net/weixin_42674359/article/details/88798648  https://blog.csdn.net/weixin_38098195/article/details/81135137 （实操）https://cloud.tencent.com/developer/article/1356698
