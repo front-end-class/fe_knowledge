@@ -3,6 +3,18 @@
 ### JavaScript
 -  let、const、var 的区别有哪些？- var可变量提升，可重复声明，无暂存死区，无块级作用域  
 -  [this详解](http://www.inode.club/webframe/javascript/this.html)
+-  上下文
+   ```js
+   自执行函数：
+   
+   var foo = 1
+   (function foo() {
+       foo = 10
+       console.log(foo)
+   }()) // -> ƒ foo() { foo = 10 ; console.log(foo) }
+   
+   因为当 JS 解释器在遇到非匿名的立即执行函数时，会创建一个辅助的特定对象，然后将函数名称作为这个对象的属性，因此函数内部才可以访问到 foo，但是这个值又是只读的，所以对它的赋值并不生效，所以打印的结果还是这个函数，并且外部的值也没有发生更改。
+   ```
 -  数据类型和引用类型(深浅拷贝，堆栈问题) 
    + string 、number 、boolean 和 null undefined 这五种类型统称为原始类型（Primitive），表示不能再细分下去的基本类型;
    + symbol 是ES6中新增的数据类型，symbol 表示独一无二的值，通过 Symbol 函数调用生成，由于生成的 symbol 值为原始类型，所以 Symbol 函数不能使用new 调用；
