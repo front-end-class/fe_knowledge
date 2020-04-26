@@ -73,6 +73,23 @@
    + promise.all中的执行顺序是并行的，但是会等全部完成的结果传递给then
    + 执行顺序，promise是then方法调用之后才会执行吗？还是从创建那一刻就开始执行？ promise从创建那一刻就开始执行，只是把结果传递给了then，then与promise的执行无关。
 -  async/await 
+   ```js
+   function sleep() {
+     return new Promise(resolve => {
+       setTimeout(() => {
+         console.log('完成')
+         resolve("sleep");
+       }, 2000);
+     });
+   }
+   async function test() {
+     let value = await sleep();
+     console.log("开始");
+   }
+   test()
+   // 完成
+   // 开始
+   ```
    + async 和 await 相比直接使用 Promise 来说，优势在于处理 then 的调用链，能够更清晰准确的写出代码。缺点在于滥用 await 可能会导致性能问题，因为 await 会阻塞代码，也许之后的异步代码并不依赖于前者，但仍然需要等待前者完成，导致代码失去了并发性。
 -  for in，for of，Object.keys和Object.getOwnPropertyNames的区别  
 -  了解哪些数据结构和算法  
