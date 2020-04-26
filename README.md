@@ -148,6 +148,16 @@
    + parseInt("1",0);//第二个参数为进制，此时0会忽略，根据 string 以 1 ~ 9 的数字开头，parseInt() 将把它解析为十进制的整数1。
    + parseInt("2",1);//此时将2转为1进制数，由于超过进制数1，所以返回NaN。
    + parseInt("3",2);//此时将3转为2进制数，由于超过进制数1，所以返回NaN。
+-  ES6中，子类中，super方法是必须调用的，因为子类本身没有自身的this对象，需要通过super方法拿到父类的this对象。在子类中，没有构造函数，那么在默认的构造方法内部自动调用super方法，继承父类的全部属性，子类的构造方法中，必须先调用super方法，然后才能调用this关键字声明其它属性。
+   ```js
+      class Student extends Person{
+          constructor(name,sex){
+              console.log(this);//Error
+              super(name,sex);
+              this.sex=sex;
+          }
+      }
+   ```
 
 ## CSS
 -  BFC  
