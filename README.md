@@ -42,6 +42,8 @@
    3.执行一个宏任务（先进到队列中的那个宏任务），再把这次宏任务里的宏任务和微任务放到任务队列。  
    4.一直重复2、3步骤  
 -  js异步都有哪些，延伸Promise.all和Promise.race用法  
+   + promise.all中的执行顺序是并行的，但是会等全部完成的结果传递给then
+   + 执行顺序，promise是then方法调用之后才会执行吗？还是从创建那一刻就开始执行？ promise从创建那一刻就开始执行，只是把结果传递给了then，then与promise的执行无关。
 -  for in，for of，Object.keys和Object.getOwnPropertyNames的区别  
 -  了解哪些数据结构和算法  
 -  [前端性能优化，长列表如何优化](https://juejin.im/post/5b960fcae51d450e9d645c5f)  
