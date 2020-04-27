@@ -59,6 +59,14 @@
       }, i*1000, i);
    }
    ```
+-  数组的哪些API会改变原数组？
+   ```html
+   修改原数组的API有:
+   splice/reverse/fill/copyWithin/sort/push/pop/unshift/shift
+
+   不修改原数组的API有:
+   slice/map/forEach/every/filter/reduce/entries/find
+   ```
 -  观察者模式和发布订阅模式区别 [详细讲解发布订阅模式](https://juejin.im/post/5d69eef7f265da03f12e70a5) 
 -  事件模型(浏览器区别，事件代理，内存问题)  
 -  垃圾回收和内存泄露   https://juejin.im/post/5d0706a6f265da1bc23f77a9  https://blog.csdn.net/weixin_42674359/article/details/88798648  https://blog.csdn.net/weixin_38098195/article/details/81135137 （实操）https://cloud.tencent.com/developer/article/1356698
