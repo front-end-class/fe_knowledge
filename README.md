@@ -38,6 +38,73 @@
    解析：
    首先 c = foo(2)中，“c = "进行了一次LHS查询，同时需要查询“foo(2)”的值，因此“foo(2)”便是一次RHS查询，“foo(2)”为隐式变量分配，相当于“a = 2”，“a = ”为LHS。随后进入foo方法中，“b = a”中，“b =”为LHS，此时查询a的值为2，所以“= a”为RHS。“return a + b”，均需查询a和b的值，为两次RHS。不成功的 RHS 引用会导致抛出 ReferenceError 异常。不成功的 LHS 引用会导致自动隐式地创建一个全局变量（非严格模式下），该变量使用 LHS 引用的目标作为标识符，或者抛出 ReferenceError 异常（严格模式下）。
    ```
+-  "尾调用优化"（Tail call optimization），即只保留内层函数的调用帧，如果所有函数都是尾调用，那么完全可以做到每次执行时，调用帧只有一项，这将大大节省内存。
+   ```js
+   // TCO
+   function f() {
+        let m = 1;
+        let n = 2;
+        return g(m + n)
+    }
+    //等同于
+    function f() {
+        return g(3);
+    }
+    f()
+    //等同于
+    g(3)
+    
+    // no TCO
+    // 内层函数inner用到了外层函数addOne的内部变量one
+    function addOne(a) {
+        let one = 1;
+
+        function inner(b) {
+            return b + one
+        }
+        return inner(a)
+    }
+   ```
+-  函数调用自身，称为递归。如果尾调用自身就称为尾递归。尾递归由于只存在一个调用帧，所以永远不会发生“栈溢出”错误。
+   ```js
+   function factorial(n) {
+        if (n === 1) return 1;
+        return n * factorial(n - 1)
+    }
+
+    console.log(factorial(5)); // 120
+    console.log(factorial(4)); // 24
+    
+   上面代码是一个阶乘函数，计算n的阶乘，最多需要保存n个调用记录。如果改写成尾递归，只保留一个调用记录。
+
+   function factorial(n, total) {
+        if (n === 1) return total;
+        return factorial(n - 1, n * total);
+   };
+   console.log(factorial(5, 1)); // 120
+   console.log(factorial(4, 1)); // 24
+   
+   计算Fibonacci数列（斐波那契数列），也能充分说明尾递归优化的重要性
+
+    function Fibonacci(n) {
+        if (n <= 1) { return 1 };
+        return Fibonacci(n - 1) + Fibonacci(n - 2)
+    }
+
+    console.log(Fibonacci(10)); //89
+    console.log(Fibonacci(100)); //堆栈溢出
+   
+   尾调用优化过后的Fibonacci数列实现如下
+
+    function Fibonacci(n, ac1 = 1, ac2 = 1) {
+        if (n <= 1) { return ac2 };
+        return Fibonacci(n - 1, ac2, ac1 + ac2);
+    }
+
+    console.log(Fibonacci(10)); //89
+    console.log(Fibonacci(30)); //1346269
+    console.log(Fibonacci(100)); //10946
+   ```
 -  数据类型和引用类型(深浅拷贝，堆栈问题) 
    + string 、number 、boolean 和 null undefined 这五种类型统称为原始类型（Primitive），表示不能再细分下去的基本类型;
    + symbol 是ES6中新增的数据类型，symbol 表示独一无二的值，通过 Symbol 函数调用生成，由于生成的 symbol 值为原始类型，所以 Symbol 函数不能使用new 调用；
