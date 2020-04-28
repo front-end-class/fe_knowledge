@@ -76,13 +76,14 @@
     console.log(factorial(4)); // 24
     
    上面代码是一个阶乘函数，计算n的阶乘，最多需要保存n个调用记录。如果改写成尾递归，只保留一个调用记录。
-
-   function factorial(n, total) {
+   
+   // es6默认值
+   function factorial(n, total = 1) {
         if (n === 1) return total;
         return factorial(n - 1, n * total);
    };
-   console.log(factorial(5, 1)); // 120
-   console.log(factorial(4, 1)); // 24
+   console.log(factorial(5)); // 120
+   console.log(factorial(4)); // 24
    
    计算Fibonacci数列（斐波那契数列），也能充分说明尾递归优化的重要性
 
