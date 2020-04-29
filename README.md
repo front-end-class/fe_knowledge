@@ -402,6 +402,16 @@
 -  BEM  
 -  盒子模型
 
+## HTTP和HTTPS
+-  请求头Connection: keep-alive的优点
+   + 较少的CPU和内存的使用（由于同时打开的连接的减少了）
+   + 允许请求和应答的HTTP管线化
+   + 降低拥塞控制 （TCP连接减少了）
+   + 减少了后续请求的延迟（无需再进行握手）
+   + 报告错误无需关闭TCP连接
+   
+   
+   
 ## 实用代码
 -  [JavaScript实现base64编码解码](https://www.cnblogs.com/mofish/archive/2012/02/25/2367858.html)
 
