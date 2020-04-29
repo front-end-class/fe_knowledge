@@ -190,6 +190,7 @@
 -  js异步都有哪些，延伸Promise.all和Promise.race用法  
    + promise.all中的执行顺序是并行的，但是会等全部完成的结果传递给then
    + 执行顺序，promise是then方法调用之后才会执行吗？还是从创建那一刻就开始执行？ promise从创建那一刻就开始执行，只是把结果传递给了then，then与promise的执行无关。
+-  [Promise的源码实现（完美符合Promise/A+规范）](https://juejin.im/post/5c88e427f265da2d8d6a1c84)
 -  async/await 
    ```js
    function sleep() {
