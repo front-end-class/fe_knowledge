@@ -224,9 +224,9 @@
    }
    console.log(curry(add)(1,2,3))
    ```
--  解释下call，apply和bind用法 (都可以改变上下文，前两者传参方式不同，而且调用立即执行，但bind并不会 http://web.jobbole.com/83642/)  
+-  解释下call，apply和bind用法 (都可以改变上下文，前两者传参方式不同，而且调用立即执行，但bind并不会)  
    ```js
-   // 模拟 call 原理
+   // 模拟 call 原理，apply同理类似
    Function.prototype.callMock = function(){
        let [self, ...args] = [...arguments]
       
@@ -249,7 +249,17 @@
    }
 
    fullName.callMock(person); 
-
+   
+   
+   // 模拟 bind
+   Function.prototype.bind = function () {
+        var self = this,                        // 保存原函数
+        context = [].shift.call(arguments),     // 取出第一个参数，为this上下文
+        args = [].slice.call(arguments);        // 取出剩余的参数转为数组
+        return function () {                    // 返回一个新函数
+            self.apply(context,[].concat.call(args, [].slice.call(arguments)));
+        }
+   }
    ```
 -  谈谈mpvue，taro，uniapp，原生小程序等等经验 (分别基于vue和react语法，方便h5复用某些组件结构逻辑(按照我们的经验，大概有50%可以复用，调整的细节还是不少)，快速迁移到小程序) ，踩坑及解决方法  
 -  RN，ionic，flutter的了解和实践  
