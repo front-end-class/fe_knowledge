@@ -118,6 +118,22 @@
 -  [节流和防抖](https://segmentfault.com/a/1190000016261602)   
    + 防抖是将多次执行变为最后一次执行，节流是将多次执行变成每隔一段时间执行。
 -  解释prototype和__proto__的区别 https://www.cnblogs.com/myfirstboke/p/10449272.html  https://www.cnblogs.com/shamoyuu/p/prototype.html 
+
+   + prototype是构造函数的属性。
+   + __proto__ 是每个实例都有的属性，可以访问 [[prototype]] 属性。
+   + 实例的__proto__ 与其构造函数的prototype指向的是同一个对象。
+   ```js
+   function Student(name) {
+       this.name = name;
+   }
+   Student.prototype.setAge = function(){
+       this.age = 30;
+   }
+   let mon = new Student('mon');
+   console.log(mon.__proto__);
+   console.log(Student.prototype);
+   console.log(mon.__proto__ === Student.prototype);
+   ```
 -  [new()到底做了些什么](https://www.jianshu.com/p/e7015984f608)  
    ```js
    function newObject() {
