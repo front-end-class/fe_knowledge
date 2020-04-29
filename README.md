@@ -294,7 +294,9 @@
 -  [数组去重](https://juejin.im/post/5ceebfe4f265da1bb96fc09c#heading-0)
 -  flat扁平化 
    ```js
-   [1, [2, [3, [4]], 5]].flat(Math.pow(2, 53) - 1)  
+   [1, [2, [3, [4]], 5]].flat(Math.pow(2, 53) - 1)
+   [1, [2, [3, [4]], 5]].flat(Number.MAX_SAFE_INTEGER)
+   // Number.MAX_SAFE_INTEGER == Math.pow(2, 53) - 1
    -------------
    String([1,[2,3,[4,5,6,[7,8]]]]).split(',')
    String(["🐷", ["🐶", "🐂"], ["🐎", ["🐑", ["🐲"]], "🐛"]]).split(',')
