@@ -380,7 +380,7 @@
 
    结果转换成十进制之后就是 0.30000000000000004。  
    
-
+-  [javascript内存管理](https://www.cxymsg.com/guide/memory.html)
 
 ## CSS
 -  BFC  
