@@ -381,7 +381,14 @@
    结果转换成十进制之后就是 0.30000000000000004。  
    
 -  [javascript内存管理](https://www.cxymsg.com/guide/memory.html)
-
+-  [null==0 为 false 而 null>=0 为 true](https://github.com/dt-fe/weekly/blob/v2/025.%E7%B2%BE%E8%AF%BB%E3%80%8Anull%20%3E%3D%200%3F%E3%80%8B.md)
+   + >，< 为关系运算符，在设计上需要尝试转为一个number，而相等运算符在设计上，则没有这方面的考虑。
+   + null > 0  // null 尝试转类型为number , Number(null) > 0，为 false。
+   + null >= 0 // null 尝试转类型为number , Number(null) >= 0，为 true。
+   + null == 0 // 在设计上，会 return false，所以为false。
+   
+   
+   
 ## CSS
 -  BFC  
    ```html
