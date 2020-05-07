@@ -385,8 +385,36 @@
    + null > 0  // null 尝试转类型为number , Number(null) > 0，为 false。
    + null >= 0 // null 尝试转类型为number , Number(null) >= 0，为 true。
    + null == 0 // 在设计上，会 return false，所以为false。
-   
-   
+-  ES6 模块和 CommonJS 模块的差异（ import 和 require 的区别）？
+   + ES6模块在编译时，就能确定模块的依赖关系，以及输入和输出的变量；
+   + CommonJS 模块，运行时加载；
+   + ES6 模块自动采用严格模式，无论模块头部是否写了 "use strict"；
+   + require 可以做动态加载，import 语句做不到，import 语句必须位于顶层作用域中；
+   + ES6 模块中顶层的 this 指向 undefined，ommonJS 模块的顶层 this 指向当前模块；
+   + CommonJS 模块输出的是一个值的拷贝，ES6 模块输出的是值的引用。CommonJS 模块输出的是值的拷贝，也就是说，一旦输出一个值，模块内部的变化就影响不到这个值。如：
+   ```js
+   //name.js
+   var name = 'William';
+   setTimeout(() => name = 'Github', 200);
+   module.exports = {
+       name
+   };
+   //index.js
+   const name = require('./name');
+   console.log(name); //William
+   setTimeout(() => console.log(name), 300); //William
+   ```
+   + 对比 ES6 模块看一下，ES6 模块的运行机制与 CommonJS 不一样。JS 引擎对脚本静态分析的时候，遇到模块加载命令 import ，就会生成一个只读引用。等到脚本真正执行时，再根据这个只读引用，到被加载的那个模块里面去取值。
+   ```js
+   //name.js
+   var name = 'William';
+   setTimeout(() => name = 'Github', 200);
+   export { name };
+   //index.js
+   import { name } from './name';
+   console.log(name); //William
+   setTimeout(() => console.log(name), 300); //Github  
+   ```
    
 ## CSS
 -  BFC  
