@@ -118,7 +118,6 @@
 -  [节流和防抖](https://segmentfault.com/a/1190000016261602)   
    + 防抖是将多次执行变为最后一次执行，节流是将多次执行变成每隔一段时间执行。
 -  解释prototype和__proto__的区别 https://www.cnblogs.com/myfirstboke/p/10449272.html  https://www.cnblogs.com/shamoyuu/p/prototype.html 
-
    + prototype是构造函数的属性。
    + __proto__ 是每个实例都有的属性，可以访问 [[prototype]] 属性。
    + 实例的__proto__ 与其构造函数的prototype指向的是同一个对象。
@@ -187,7 +186,7 @@
    2.查找任务队列有没有微任务，有就把此时的微任务全部按顺序执行 （这就是为什么promise会比setTimeout先执行，因为先执行的宏任务是同步代码，setTimeout被放进任务队列了，setTimeout又是宏任务，在它之前先得执行微任务(就比如promise)）。  
    3.执行一个宏任务（先进到队列中的那个宏任务），再把这次宏任务里的宏任务和微任务放到任务队列。  
    4.一直重复2、3步骤  
--  js异步都有哪些，延伸Promise.all和Promise.race用法  
+-  js异步都有哪些，延伸 `Promise.all` 和 `Promise.race` 的[实现](https://github.com/YvetteLau/Blog/issues/2)和用法  
    + promise.all中的执行顺序是并行的，但是会等全部完成的结果传递给then
    + 执行顺序，promise是then方法调用之后才会执行吗？还是从创建那一刻就开始执行？ promise从创建那一刻就开始执行，只是把结果传递给了then，then与promise的执行无关。
 -  [Promise的源码实现（完美符合Promise/A+规范）](https://juejin.im/post/5c88e427f265da2d8d6a1c84)
