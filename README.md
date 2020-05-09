@@ -223,6 +223,7 @@
 -  函数式编程([高阶函数，高阶组件](https://blog.csdn.net/mapbar_front/article/details/79697863))  
 -  装饰器模式 https://segmentfault.com/a/1190000018277217  
 -  webpack js分包的操作，它是如何压缩前端代码  
+-  [从零实现webpack热更新 HMR](https://juejin.im/post/5df36ffd518825124d6c1765)
 -  ssr，pwa的了解  
 -  electron(electron-vue)的了解 (基于h5技术开发的混合桌面应用 http://electronjs.org/docs) 
 -  koa2的原理，是否了解其他的框架？(不局限于nodejs)  
@@ -450,8 +451,11 @@
 ## 实用代码
 -  [JavaScript实现base64编码解码](https://www.cnblogs.com/mofish/archive/2012/02/25/2367858.html)
 
+
 ## 工具/网站
 -  [Storybook](https://storybook.js.org/) - 一个方便管理和测试组件的开源工具，适用于 React, Vue, 和 Angular。
+-  [cypress](https://www.cypress.io/) - 更适合于前端工程师使用的自动化测试工具
+
 
 ## 其他
 -  前端代码开发完成，咱们是先上线页面，还是先上线静态资源？（消息摘要算法，http://web.jobbole.com/93678/)   
