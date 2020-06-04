@@ -279,6 +279,17 @@
         }
    }
    ```
+-  ```js
+    let obj = {
+     a: 1,
+     f () {
+       return this.a
+     }
+   }
+   const r = obj.f.bind({ a: 2 }).call({ a: 3 })
+   console.log(r)
+   // 返回多少？为什么？
+   ```
 -  谈谈mpvue，taro，uniapp，原生小程序等等经验 (分别基于vue和react语法，方便h5复用某些组件结构逻辑(按照我们的经验，大概有50%可以复用，调整的细节还是不少)，快速迁移到小程序) ，踩坑及解决方法  
 -  RN，ionic，flutter的了解和实践  
 -  什么是跨域？前端跨域有哪些处理方法？(相同的域，相同的端口，相同的协议; CORS, new Image, document.domain, Jsonp, postMessage)  
