@@ -286,10 +286,11 @@
        return this.a
      }
    }
-   const r = obj.f.bind({ a: 2 }).call({ a: 3 })
+   const r = obj.f.bind({ a: 2 }).bind({ a: 3 }).call({ a: 4 })
    console.log(r)
    // 返回多少？为什么？
    ```
+   当我们用一个函数调用bind的时候，返回的函数中会保存这当前this（obj.f）和a参数。所以最后调用call的时候执行的函数是目标函数，也就是调用了bind的函数，这些都是无法被修改的了，但是参数是调用bind和call时可以叠加的，这是唯一可以修改的地方。执行两次bind的原理可以参考bind的源码，和call的差不多，也是目标函数和this是被固定的了，只有参数列表会叠加。
 -  谈谈mpvue，taro，uniapp，原生小程序等等经验 (分别基于vue和react语法，方便h5复用某些组件结构逻辑(按照我们的经验，大概有50%可以复用，调整的细节还是不少)，快速迁移到小程序) ，踩坑及解决方法  
 -  RN，ionic，flutter的了解和实践  
 -  什么是跨域？前端跨域有哪些处理方法？(相同的域，相同的端口，相同的协议; CORS, new Image, document.domain, Jsonp, postMessage)  
