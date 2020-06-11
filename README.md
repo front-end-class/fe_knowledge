@@ -463,6 +463,8 @@
 ## 浏览器
 -  [图解浏览器的基本工作原理](https://zhuanlan.zhihu.com/p/47407398)
 
+## 微前端
+-  [统一运营工作台的解决方案](https://mp.weixin.qq.com/s/xmcXz5GWSEYFy18APPHwlg)
 
 ## HTTP和HTTPS
 -  请求头Connection: keep-alive的优点
@@ -491,7 +493,7 @@
 ## 工具/网站
 -  [Storybook](https://storybook.js.org/) - 一个方便管理和测试组件的开源工具，适用于 React, Vue, 和 Angular。
 -  [cypress](https://www.cypress.io/) - 更适合于前端工程师使用的自动化测试工具
-
+-  [Vue Datav](http://datav.jiaminghi.com/) - Vue 大屏数据展示组件库
 
 ## 其他
 -  前端代码开发完成，咱们是先上线页面，还是先上线静态资源？（消息摘要算法，http://web.jobbole.com/93678/)   
