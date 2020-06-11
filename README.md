@@ -459,6 +459,11 @@
 -  BEM  
 -  盒子模型
 
+
+## 浏览器
+-  [图解浏览器的基本工作原理](https://zhuanlan.zhihu.com/p/47407398)
+
+
 ## HTTP和HTTPS
 -  请求头Connection: keep-alive的优点
    + 较少的CPU和内存的使用（由于同时打开的连接的减少了）
@@ -476,6 +481,7 @@
 
 ## 自动化探索
 -  [Puppeteer 爬虫实践](https://mp.weixin.qq.com/s?__biz=MzI0NTE5NzYyMw==&mid=2247483769&idx=1&sn=f4d65fe8b60d8870b0a243ad5da48048&scene=21)
+
 
 ## 在线电子书
 -  [深入理解 TypeScript](https://jkchao.github.io/typescript-book-chinese/)
