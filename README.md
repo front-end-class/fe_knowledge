@@ -215,7 +215,7 @@
 -  [前端缓存，浏览器缓存](https://mp.weixin.qq.com/s/Q2h1EEKubAXkaM4g85Mkrw)    
 -  前端安全相关问题  https://mp.weixin.qq.com/s/tgIWXcfzswcKcKcb-Dzt_g https://juejin.im/post/5bad9140e51d450e935c6d64
 -  MVC和MVVM的区别  
--  简单讲解下vue2原理，是否有了解vue3的变化 (最主要就是数据劫持，object.defineProperty需要遍历对象的属性作操作，proxy是拦截当前对象作操作。还有其他待补充) 
+-  简单讲解下vue2原理，是否有了解vue3的变化 (最主要就是数据劫持，object.defineProperty需要遍历对象的属性作操作，proxy是拦截当前对象作操作。还有其他待补充) [Vue.js 技术揭秘](https://ustbhuangyi.github.io/vue-analysis/)
 -  vuex原理和为什么要使用以及状态持久化(vuex在vue里当作插件引入，并且被数据劫持。持久化可通过store plugins做存储，[vuex-persistedstate](https://github.com/robinvdvleuten/vuex-persistedstate), [IndexedDB](http://www.ruanyifeng.com/blog/2018/07/indexeddb.html)之类)  
 -  vue-router原理  (基于Hash和History API)
 -  VNode的理解  
@@ -429,6 +429,16 @@
    setTimeout(() => console.log(name), 300); //Github  
    ```
    
+
+## 算法与数据结构
+-  [前端该如何准备数据结构和算法？](https://juejin.im/post/5d5b307b5188253da24d3cd1)
+-  [数据结构和算法专题](http://www.conardli.top/docs/dataStructure/)
+-  [如何分析时间复杂度?](https://www.cxymsg.com/guide/algorithm.html#%E5%A6%82%E4%BD%95%E5%88%86%E6%9E%90%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6)
+
+## 小程序
+-  [小程序状态响应式：你可以零侵入式实现小程序的全局状态管理吗](https://juejin.im/post/5e89768a51882573b2195205)
+-  [Uniapp 从入门到进阶](https://juejin.im/book/5da9d16c5188254796427201)
+
 ## CSS
 -  BFC  
    ```html
@@ -464,6 +474,11 @@
 -  [JavaScript实现base64编码解码](https://www.cnblogs.com/mofish/archive/2012/02/25/2367858.html)
 
 
+## 在线电子书
+-  [深入理解 TypeScript](https://jkchao.github.io/typescript-book-chinese/)
+-  [Flutter完整开发实战详解](https://guoshuyu.cn/home/wx/)
+
+
 ## 工具/网站
 -  [Storybook](https://storybook.js.org/) - 一个方便管理和测试组件的开源工具，适用于 React, Vue, 和 Angular。
 -  [cypress](https://www.cypress.io/) - 更适合于前端工程师使用的自动化测试工具
@@ -472,7 +487,7 @@
 ## 其他
 -  前端代码开发完成，咱们是先上线页面，还是先上线静态资源？（消息摘要算法，http://web.jobbole.com/93678/)   
 -  谈谈带团队，跟项目的经验  
->>团建(运动，聚会)，团队开源项目和blog，每周分享，每天站会，单独探讨
+   >> 团建(运动，聚会)，团队开源项目和blog，每周分享，每天站会，单独探讨
 -  IQ题和EQ题  
 -  有无开源作品  
 -  有无做过分享
