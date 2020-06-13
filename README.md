@@ -481,7 +481,7 @@
    ![来源于互联网](https://user-images.githubusercontent.com/25027560/38223505-d8ab53da-371d-11e8-9263-79814b6971a5.png) 
    
 ## Node.js和Deno.js
--  [](https://juejin.im/post/5eb8acec6fb9a043383d7610)
+-  [《Deno 1.0 你需要了解的》](https://juejin.im/post/5eb8acec6fb9a043383d7610)
 
 
 
