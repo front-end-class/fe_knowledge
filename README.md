@@ -463,8 +463,12 @@
 ## 浏览器
 -  [图解浏览器的基本工作原理](https://zhuanlan.zhihu.com/p/47407398)
 
+
 ## 微前端
 -  [统一运营工作台的解决方案](https://mp.weixin.qq.com/s/xmcXz5GWSEYFy18APPHwlg)
+-  [万字解析微前端、微前端框架qiankun以及源码](https://mp.weixin.qq.com/s/_A5OfB4Xb3H_97r-bKlz0g) 
+-  [深度：从零编写一个微前端框架](https://mp.weixin.qq.com/s/A0FR3h5Cvd0MWD5Gw_L19A) 
+
 
 ## HTTP和HTTPS
 -  请求头Connection: keep-alive的优点
