@@ -225,6 +225,7 @@
 -  webpack js分包的操作，它是如何压缩前端代码  
 -  [从零实现webpack热更新 HMR](https://juejin.im/post/5df36ffd518825124d6c1765)
 -  [深入浅出 Babel 上篇：架构和原理 + 实战](https://juejin.im/post/5d94bfbf5188256db95589be)
+-  [深入浅出 Babel 下篇：既生 Plugin 何生 Macros](https://juejin.im/post/5da12397e51d4578364f6ffa)
 -  ssr，pwa的了解  
 -  electron(electron-vue)的了解 (基于h5技术开发的混合桌面应用 http://electronjs.org/docs) 
 -  koa2的原理，是否了解其他的框架？(不局限于nodejs)  
