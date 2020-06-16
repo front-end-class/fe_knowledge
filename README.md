@@ -530,3 +530,11 @@
    + 降低开发系统的成本（不需要每个业务都开发一次登录系统和用户状态控制）；
 
    总的来说，大中型web应用，SSO可以带来很多好处，缺点却很少。
+-  开发脚手架需要的包：
+   + 交互输入：[inquirer](http://npm.im/inquirer)、 [enquirer](http://npm.im/enquirer) 、[prompts](https://npm.im/prompts)
+   + 输出美化：[chalk](http://npm.im/chalk)、 [ink](http://npm.im/ink)
+   + 加载动画：[ora](http://npm.im/ora)
+   + 基本解析：[meow](http://npm.im/meow)、 [arg](http://npm.im/arg)
+   + 参数解析：[commander](http://npm.im/commander)、[yargs](https://www.npmjs.com/package/yargs)
+   + 操作命令行：[sindresorhus/ansi-escapes](https://github.com/sindresorhus/ansi-escapes)
+   + 输出截断： [sindresorhus/cli-truncate](https://github.com/sindresorhus/cli-truncate)
