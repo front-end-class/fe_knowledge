@@ -109,11 +109,18 @@
     console.log(Fibonacci(30)); //1346269
     console.log(Fibonacci(100)); //10946
    ```
+-  关于堆栈的示意图
+   ![](https://user-gold-cdn.xitu.io/2019/8/30/16ce31834037d16e)
+   + 堆是动态分配内存，内存大小不一，也不会自动释放。
+   + 栈是自动分配相对固定大小的内存空间，并由系统自动释放.
 -  数据类型和引用类型(深浅拷贝，堆栈问题) 
    + string 、number 、boolean 和 null undefined 这五种类型统称为原始类型（Primitive），表示不能再细分下去的基本类型;
    + symbol 是ES6中新增的数据类型，symbol 表示独一无二的值，通过 Symbol 函数调用生成，由于生成的 symbol 值为原始类型，所以 Symbol 函数不能使用new 调用；
    + object 属于引用类型，array 和 function 是 object 的子类型。对象在逻辑上是属性的无序集合，是存放各种值的容器。对象值存储在堆的是引用地址，所以对象值是可变的。
-
+   + 基本数据类型
+   Undefined、Null、Boolean、String、Number、Symbol都是直接按值直接存在栈中，每种类型的数据占用的内存空间大小都是固定的，并且由系统自动分配自动释放。
+   + 引用数据类型
+   Object，Array，Function这样的数据存在堆内存中，但是数据指针是存放在栈内存中的，当我们访问引用数据时，先从栈内存中获取指针，通过指针在堆内存中找到数据。
 -  深浅拷贝实则是一种递归算法，可以利用 weakMap 弱引用来存储防止爆栈  https://juejin.im/post/5d6aa4f96fb9a06b112ad5b1
 -  [节流和防抖](https://segmentfault.com/a/1190000016261602)   
    + 防抖是将多次执行变为最后一次执行，节流是将多次执行变成每隔一段时间执行。
