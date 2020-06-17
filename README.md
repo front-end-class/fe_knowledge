@@ -513,6 +513,7 @@
 -  [Storybook](https://storybook.js.org/) - 一个方便管理和测试组件的开源工具，适用于 React, Vue, 和 Angular。
 -  [cypress](https://www.cypress.io/) - 更适合于前端工程师使用的自动化测试工具
 -  [Vue Datav](http://datav.jiaminghi.com/) - Vue 大屏数据展示组件库
+-  [可视化Javascript底层运行](http://latentflip.com/loupe/)
 
 ## 其他
 -  前端代码开发完成，咱们是先上线页面，还是先上线静态资源？（消息摘要算法，http://web.jobbole.com/93678/)   
