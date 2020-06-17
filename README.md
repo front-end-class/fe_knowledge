@@ -109,10 +109,11 @@
     console.log(Fibonacci(30)); //1346269
     console.log(Fibonacci(100)); //10946
    ```
--  关于堆栈的示意图
+-  关于堆栈解释
    ![](https://user-gold-cdn.xitu.io/2019/8/30/16ce31834037d16e)
    + 堆是动态分配内存，内存大小不一，也不会自动释放。
-   + 栈是自动分配相对固定大小的内存空间，并由系统自动释放.
+   + 栈是自动分配相对固定大小的内存空间，并由系统自动释放。栈的大小不是无限的。例如Chrome就会限定栈的最大为16,000帧。所以无限递归会导致Chrome抛出Maximum Call Stack size exceeded:
+   ![](https://user-gold-cdn.xitu.io/2019/8/30/16ce31848d545bb6)
 -  数据类型和引用类型(深浅拷贝，堆栈问题) 
    + string 、number 、boolean 和 null undefined 这五种类型统称为原始类型（Primitive），表示不能再细分下去的基本类型;
    + symbol 是ES6中新增的数据类型，symbol 表示独一无二的值，通过 Symbol 函数调用生成，由于生成的 symbol 值为原始类型，所以 Symbol 函数不能使用new 调用；
