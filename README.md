@@ -471,6 +471,12 @@
 -  盒子模型
 
 
+## Webpack，Rollup，Parcel
+-  Webpack 对比 Rollup
+   + Webpack的优势在于它更全面，基于“一切皆模块”的思想而衍生出丰富的loader和plugin可以满足各种使用场景；
+   + 而Rollup则更像一把手术刀，它更专注于JavaScript的打包。当然Rollup也支持许多其他类型的模块，但是总体而言在通用性上还是不如Webpack。
+   + 如果当前的项目需求仅仅是打包JavaScript，比如一个JavaScript库，那么Rollup很多时候会是我们的第一选择。
+
 ## 浏览器
 -  [图解浏览器的基本工作原理](https://zhuanlan.zhihu.com/p/47407398)
 
