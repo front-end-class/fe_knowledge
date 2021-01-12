@@ -1,4 +1,4 @@
-# 前端基础知识，不断更新并补上对应的文章(答案)
+# 前端知识，不断更新
 
 ## JavaScript
 -  let、const、var 的区别有哪些？- var可变量提升，可重复声明，无暂存死区，无块级作用域  
@@ -446,11 +446,12 @@
 -  [数据结构和算法专题](http://www.conardli.top/docs/dataStructure/)
 -  [如何分析时间复杂度?](https://www.cxymsg.com/guide/algorithm.html#%E5%A6%82%E4%BD%95%E5%88%86%E6%9E%90%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6)
 
-## 小程序
+## 小程序，Uni-app
 -  [小程序状态响应式：你可以零侵入式实现小程序的全局状态管理吗](https://juejin.im/post/5e89768a51882573b2195205)
 -  [Uniapp 从入门到进阶](https://juejin.im/book/5da9d16c5188254796427201)
 
 ## Vue2.0和Vue3.0
+-  [Vue3.0 有哪些特点](https://juejin.cn/post/6896438269291347976)
 
 
 ## CSS
@@ -474,10 +475,13 @@
 -  盒子模型
 
 
+## 工程化
+- [Monoreopo 前端多项目管理方式（yarn workspaces, lerna）](https://segmentfault.com/a/1190000019309820)
+
 ## Webpack，Rollup，Parcel
 -  Webpack 对比 Rollup
    + Webpack的优势在于它更全面，基于“一切皆模块”的思想而衍生出丰富的loader和plugin可以满足各种使用场景；
-   + 而Rollup则更像一把手术刀，它更专注于JavaScript的打包。当然Rollup也支持许多其他类型的模块，但是总体而言在通用性上还是不如Webpack。
+   + 而Rollup则更像一把 手术刀，它更专注于JavaScript的打包。当然Rollup也支持许多其他类型的模块，但是总体而言在通用性上还是不如Webpack。
    + 如果当前的项目需求仅仅是打包JavaScript，比如一个JavaScript库，那么Rollup很多时候会是我们的第一选择。
 
 ## 浏览器
