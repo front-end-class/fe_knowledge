@@ -498,7 +498,20 @@
    + 减少了后续请求的延迟（无需再进行握手）
    + 报告错误无需关闭TCP连接
 -  浏览器强缓存和协商缓存
-   ![来源于互联网](https://user-images.githubusercontent.com/25027560/38223505-d8ab53da-371d-11e8-9263-79814b6971a5.png) 
+   ![来源于互联网](https://user-images.githubusercontent.com/25027560/38223505-d8ab53da-371d-11e8-9263-79814b6971a5.png)   
+   HTTP缓存机制要点如下：
+   + HTTP缓存机制分为强制缓存和协商缓存两类。
+   + 强制缓存的意思就是不要问了(不发起请求)，直接用缓存吧。
+   + 强制缓存常见技术有Expires和Cache-Control。
+   + Expires的值是一个时间，表示这个时间前缓存都有效，都不需要发起请求。
+   + Cache-Control有很多属性值，常用属性max-age设置了缓存有效的时间长度，单位为秒，这个时间没到，都不用发起请求。
+   + immutable也是Cache-Control的一个属性，表示这个资源这辈子都不用再请求了，但是他兼容性不好，Cache-Control其他属性可以参考MDN的文档。
+   + Cache-Control的max-age优先级比Expires高。
+   + 协商缓存常见技术有ETag和Last-Modified。
+   + ETag其实就是给资源算一个hash值或者版本号，对应的常用request header为If-None-Match。
+   + Last-Modified其实就是加上资源修改的时间，对应的常用request header为If-Modified-Since，精度为秒。
+   + ETag每次修改都会改变，而Last-Modified的精度只到秒，所以ETag更准确，优先级更高，但是需要计算，所以服务端开销更大。
+   + 强制缓存和协商缓存都存在的情况下，先判断强制缓存是否生效，如果生效，不用发起请求，直接用缓存。如果强制缓存不生效再发起请求判断协商缓存。
    
    
 ## Node.js和Deno.js
