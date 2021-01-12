@@ -537,7 +537,7 @@
 
 
 ## 工具/网站
--  [Storybook](https://storybook.js.org/) - 一个方便管理和测试组件的开源工具，适用于 React, Vue, 和 Angular。
+-  [Storybook](https://storybook.js.org/) - 一个高效有序地构建炫酷用户界面，方便管理和测试组件的开源工具，适用于 React, Vue, 和 Angular。
 -  [cypress](https://www.cypress.io/) - 更适合于前端工程师使用的自动化测试工具
 -  [Vue Datav](http://datav.jiaminghi.com/) - Vue 大屏数据展示组件库
 -  [可视化Javascript底层运行](http://latentflip.com/loupe/)
