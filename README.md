@@ -450,6 +450,9 @@
 -  [小程序状态响应式：你可以零侵入式实现小程序的全局状态管理吗](https://juejin.im/post/5e89768a51882573b2195205)
 -  [Uniapp 从入门到进阶](https://juejin.im/book/5da9d16c5188254796427201)
 
+## Vue2.0和Vue3.0
+
+
 ## CSS
 -  BFC  
    ```html
