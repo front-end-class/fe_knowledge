@@ -478,6 +478,7 @@
 
 ## 工程化
 - [Monoreopo 前端多项目管理方式（yarn workspaces, lerna）](https://segmentfault.com/a/1190000019309820)
+- [一种自动生成网页骨架屏的方式](https://github.com/famanoder/dps)
 
 ## Webpack，Rollup，Parcel
 -  Webpack 对比 Rollup
