@@ -477,8 +477,10 @@
 
 
 ## 工程化
-- [Monoreopo 前端多项目管理方式（yarn workspaces, lerna）](https://segmentfault.com/a/1190000019309820)
-- [一种自动生成网页骨架屏的方式](https://github.com/famanoder/dps)
+-  [Monoreopo 前端多项目管理方式（yarn workspaces, lerna）](https://segmentfault.com/a/1190000019309820)
+-  [Monoreopo工具介绍](https://juejin.cn/post/6913497232687759367)
+-  [一种自动生成网页骨架屏的方式](https://github.com/famanoder/dps)
+-  [vite工程化](https://juejin.cn/post/6910014283707318279)
 
 ## Webpack，Rollup，Parcel
 -  Webpack 对比 Rollup
@@ -488,6 +490,7 @@
 
 ## 浏览器
 -  [图解浏览器的基本工作原理](https://zhuanlan.zhihu.com/p/47407398)
+-  [ESM模块化](https://juejin.cn/post/6854573213985275911)
 
 
 ## 微前端
@@ -531,6 +534,7 @@
 
 ## 自动化探索
 -  [Puppeteer 爬虫实践](https://mp.weixin.qq.com/s?__biz=MzI0NTE5NzYyMw==&mid=2247483769&idx=1&sn=f4d65fe8b60d8870b0a243ad5da48048&scene=21)
+-  [自动化构建部署工具](https://juejin.cn/post/6916302771129942030)
 
 
 ## 在线电子书
@@ -538,11 +542,14 @@
 -  [Flutter完整开发实战详解](https://guoshuyu.cn/home/wx/)
 
 
+
 ## 工具/网站
 -  [Storybook](https://storybook.js.org/) - 一个高效有序地构建炫酷用户界面，方便管理和测试组件的开源工具，适用于 React, Vue, 和 Angular。
 -  [cypress](https://www.cypress.io/) - 更适合于前端工程师使用的自动化测试工具
 -  [Vue Datav](http://datav.jiaminghi.com/) - Vue 大屏数据展示组件库
 -  [可视化Javascript底层运行](http://latentflip.com/loupe/)
+
+
 
 ## 其他
 -  前端代码开发完成，咱们是先上线页面，还是先上线静态资源？（消息摘要算法，http://web.jobbole.com/93678/)   
@@ -577,4 +584,3 @@
    + 参数解析：[commander](http://npm.im/commander)、[yargs](https://www.npmjs.com/package/yargs)
    + 操作命令行：[sindresorhus/ansi-escapes](https://github.com/sindresorhus/ansi-escapes)
    + 输出截断： [sindresorhus/cli-truncate](https://github.com/sindresorhus/cli-truncate)
-   + plop
