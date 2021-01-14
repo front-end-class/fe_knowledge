@@ -536,7 +536,7 @@
 -  [Tree Shaking 原理实践](https://cloud.tencent.com/developer/article/1688857)
 -  [webpack中loader和plugin的区别](https://www.cnblogs.com/cxyqts/p/13722569.html)
    + loader运行在打包文件之前，文件转换；plugins扩展wp功能，为处理loader无法处理的事物，在整个编译周期都起作用
-
+-  [webpack 打包原理 ? 看完这篇你就懂了 !](https://github.com/webfansplz/article/issues/38)
 
 ## 浏览器
 -  [图解浏览器的基本工作原理](https://zhuanlan.zhihu.com/p/47407398)
