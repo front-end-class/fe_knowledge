@@ -194,9 +194,51 @@
    2.查找任务队列有没有微任务，有就把此时的微任务全部按顺序执行 （这就是为什么promise会比setTimeout先执行，因为先执行的宏任务是同步代码，setTimeout被放进任务队列了，setTimeout又是宏任务，在它之前先得执行微任务(就比如promise)）。  
    3.执行一个宏任务（先进到队列中的那个宏任务），再把这次宏任务里的宏任务和微任务放到任务队列。  
    4.一直重复2、3步骤  
--  js异步都有哪些，延伸 `Promise.all` 和 `Promise.race` 的[实现](https://github.com/YvetteLau/Blog/issues/2)和用法  
+-  js异步都有哪些，延伸 `Promise.all`, `Promise.any` 和 `Promise.race` 的[实现](https://github.com/YvetteLau/Blog/issues/2)和用法  
    + promise.all中的执行顺序是并行的，但是会等全部完成的结果传递给then
    + 执行顺序，promise是then方法调用之后才会执行吗？还是从创建那一刻就开始执行？ promise从创建那一刻就开始执行，只是把结果传递给了then，then与promise的执行无关。
+   ```js
+   // Promise.all
+   Promise.all = function (promiseArr) { // 类 koa compose() 函数
+     let resArr = []; //用于存放每次执行后返回结果
+     return new Promise(function (resolve, reject) {
+       let i = 0;
+       next(); // 递归
+       function next() {
+         promiseArr[i].then(function (res) {
+           resArr.push(res); // 存储每次得到的结果
+           i++;
+           if (i == promiseArr.length) {
+             // 如果函数数组中的函数都执行完，便resolve
+             resolve(resArr);
+           } else {
+             next();
+           }
+         });
+       }
+     });
+   }
+   
+   //Promise.race
+   Promise.race = function (promiseArr) {
+    promiseArr = Array.from(promiseArr);//将可迭代对象转换为数组
+    return new Promise((resolve, reject) => {
+        if (promises.length === 0) {
+            return;
+        } else {
+            for (let i = 0; i < promiseArr.length; i++) {
+                Promise.resolve(promiseArr[i]).then((data) => {
+                    resolve(data);
+                    return;
+                }, (err) => {
+                    reject(err);
+                    return;
+                });
+            }
+        }
+    });
+   }
+   ```
 -  [Promise的源码实现（完美符合Promise/A+规范）](https://juejin.im/post/5c88e427f265da2d8d6a1c84)
 -  async/await 
    ```js
@@ -434,9 +476,10 @@
    console.log(name); //William
    setTimeout(() => console.log(name), 300); //Github  
    ```
--  [Tree Shaking 原理实践](https://cloud.tencent.com/developer/article/1688857)
--  [关于proxy和symbol特点](https://mp.weixin.qq.com/s/4wt-ulMx6EKcV75W5ioPrw)
--  [npm包管理机制](https://cloud.tencent.com/developer/article/1556014) [peerDependencies](https://segmentfault.com/a/1190000022435060)
+   
+-  [Tree Shaking 原理实践](https://cloud.tencent.com/developer/article/1688857)  
+-  [关于proxy和symbol特点](https://mp.weixin.qq.com/s/4wt-ulMx6EKcV75W5ioPrw)  
+-  [npm包管理机制](https://cloud.tencent.com/developer/article/1556014) [peerDependencies](https://segmentfault.com/a/1190000022435060)  
 
 ## 算法与数据结构
 -  [前端该如何准备数据结构和算法？](https://juejin.im/post/5d5b307b5188253da24d3cd1)
@@ -484,12 +527,16 @@
 -  [一种自动生成网页骨架屏的方式](https://github.com/famanoder/dps)
 -  [vite工程化](https://juejin.cn/post/6910014283707318279)
 
+
 ## Webpack，Rollup，Parcel
 -  Webpack 对比 Rollup
    + Webpack的优势在于它更全面，基于“一切皆模块”的思想而衍生出丰富的loader和plugin可以满足各种使用场景；
    + 而Rollup则更像一把 手术刀，它更专注于JavaScript的打包。当然Rollup也支持许多其他类型的模块，但是总体而言在通用性上还是不如Webpack。
    + 如果当前的项目需求仅仅是打包JavaScript，比如一个JavaScript库，那么Rollup很多时候会是我们的第一选择。
 -  [Tree Shaking 原理实践](https://cloud.tencent.com/developer/article/1688857)
+-  [webpack中loader和plugin的区别](https://www.cnblogs.com/cxyqts/p/13722569.html)
+   + loader运行在打包文件之前，文件转换；plugins扩展wp功能，为处理loader无法处理的事物，在整个编译周期都起作用
+
 
 ## 浏览器
 -  [图解浏览器的基本工作原理](https://zhuanlan.zhihu.com/p/47407398)
