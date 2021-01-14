@@ -479,7 +479,8 @@
    
 -  [Tree Shaking 原理实践](https://cloud.tencent.com/developer/article/1688857)  
 -  [关于proxy和symbol特点](https://mp.weixin.qq.com/s/4wt-ulMx6EKcV75W5ioPrw)  
--  [npm包管理机制](https://cloud.tencent.com/developer/article/1556014) [peerDependencies](https://segmentfault.com/a/1190000022435060)  
+-  [npm包管理机制](https://cloud.tencent.com/developer/article/1556014)  
+-  [peerDependencies](https://segmentfault.com/a/1190000022435060)  
 
 ## 算法与数据结构
 -  [前端该如何准备数据结构和算法？](https://juejin.im/post/5d5b307b5188253da24d3cd1)
