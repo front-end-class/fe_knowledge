@@ -476,10 +476,9 @@
    console.log(name); //William
    setTimeout(() => console.log(name), 300); //Github  
    ```
-   
--  [Tree Shaking 原理实践](https://cloud.tencent.com/developer/article/1688857)  
+-  [Tree-Shaking原理实践](https://cloud.tencent.com/developer/article/1688857)  
 -  [关于proxy和symbol特点](https://mp.weixin.qq.com/s/4wt-ulMx6EKcV75W5ioPrw)  
--  [npm包管理机制](https://cloud.tencent.com/developer/article/1556014)  
+-  [npm 包管理机制](https://cloud.tencent.com/developer/article/1556014)  
 -  [peerDependencies](https://segmentfault.com/a/1190000022435060)  
 
 ## 算法与数据结构
