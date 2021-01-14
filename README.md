@@ -404,7 +404,7 @@
    + null > 0  // null 尝试转类型为number , Number(null) > 0，为 false。
    + null >= 0 // null 尝试转类型为number , Number(null) >= 0，为 true。
    + null == 0 // 在设计上，会 return false，所以为false。
--  ES6 模块和 CommonJS 模块的差异（ import 和 require 的区别）？
+-  ES6 模块和 CommonJS 模块的差异（ [import 和 require 的区别](https://zhuanlan.zhihu.com/p/161015809)）[深入 CommonJs 与 ES6 Module](https://www.cnblogs.com/qixidi/p/10287679.html)？
    + ES6模块在编译时，就能确定模块的依赖关系，以及输入和输出的变量；
    + CommonJS 模块，运行时加载；
    + ES6 模块自动采用严格模式，无论模块头部是否写了 "use strict"；
@@ -434,7 +434,9 @@
    console.log(name); //William
    setTimeout(() => console.log(name), 300); //Github  
    ```
-   
+-  [Tree Shaking 原理实践](https://cloud.tencent.com/developer/article/1688857)
+-  [关于proxy和symbol特点](https://mp.weixin.qq.com/s/4wt-ulMx6EKcV75W5ioPrw)
+-  [npm包管理机制](https://cloud.tencent.com/developer/article/1556014) [peerDependencies](https://segmentfault.com/a/1190000022435060)
 
 ## 算法与数据结构
 -  [前端该如何准备数据结构和算法？](https://juejin.im/post/5d5b307b5188253da24d3cd1)
@@ -487,6 +489,7 @@
    + Webpack的优势在于它更全面，基于“一切皆模块”的思想而衍生出丰富的loader和plugin可以满足各种使用场景；
    + 而Rollup则更像一把 手术刀，它更专注于JavaScript的打包。当然Rollup也支持许多其他类型的模块，但是总体而言在通用性上还是不如Webpack。
    + 如果当前的项目需求仅仅是打包JavaScript，比如一个JavaScript库，那么Rollup很多时候会是我们的第一选择。
+-  [Tree Shaking 原理实践](https://cloud.tencent.com/developer/article/1688857)
 
 ## 浏览器
 -  [图解浏览器的基本工作原理](https://zhuanlan.zhihu.com/p/47407398)
@@ -530,6 +533,13 @@
 
 ## 实用代码
 -  [JavaScript实现base64编码解码](https://www.cnblogs.com/mofish/archive/2012/02/25/2367858.html)
+-  电话号码隔位显示（344）
+   ```js
+    let str = '13800138000';
+    let newStr = '';
+    newStr = str.replace(/\s/g, '').replace(/(^\d{3})(?=\d)/g, "$1 ").replace(/(\d{4})(?=\d)/g, "$1 ");
+    console.log(newStr);
+   ```
 
 
 ## 自动化探索
