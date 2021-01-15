@@ -439,13 +439,21 @@
    0.0100110011001100110011001100110011001100110011001100
 
    结果转换成十进制之后就是 0.30000000000000004。  
-   
--  [javascript内存管理](https://www.cxymsg.com/guide/memory.html)
+
+-  转换规则：
+   + 对象 == 字符串  对象.toString()为字符串
+   + null == undefined 为true，和其他值比较不相等
+   + NaN == NaN false
+   + 剩下的都最终转为数字比较
+
 -  [null==0 为 false 而 null>=0 为 true](https://github.com/dt-fe/weekly/blob/v2/025.%E7%B2%BE%E8%AF%BB%E3%80%8Anull%20%3E%3D%200%3F%E3%80%8B.md)
    + >，< 为关系运算符，在设计上需要尝试转为一个number，而相等运算符在设计上，则没有这方面的考虑。
    + null > 0  // null 尝试转类型为number , Number(null) > 0，为 false。
    + null >= 0 // null 尝试转类型为number , Number(null) >= 0，为 true。
    + null == 0 // 在设计上，会 return false，所以为false。
+   
+-  [javascript内存管理](https://www.cxymsg.com/guide/memory.html)
+
 -  ES6 模块和 CommonJS 模块的差异（ [import 和 require 的区别](https://zhuanlan.zhihu.com/p/161015809)）[深入 CommonJs 与 ES6 Module](https://www.cnblogs.com/qixidi/p/10287679.html)？
    + ES6模块在编译时，就能确定模块的依赖关系，以及输入和输出的变量；
    + CommonJS 模块，运行时加载；
