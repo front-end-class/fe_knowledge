@@ -503,10 +503,16 @@
 -  简单讲解下vue2原理，是否有了解vue3的变化 (最主要就是数据劫持，object.defineProperty需要遍历对象的属性作操作，proxy是拦截当前对象作操作。还有其他待补充) [Vue.js 技术揭秘](https://ustbhuangyi.github.io/vue-analysis/)
 -  vuex原理和为什么要使用以及状态持久化(vuex在vue里当作插件引入，并且被数据劫持。持久化可通过store plugins做存储，[vuex-persistedstate](https://github.com/robinvdvleuten/vuex-persistedstate), [IndexedDB](http://www.ruanyifeng.com/blog/2018/07/indexeddb.html)之类)  
 -  vue-router原理  (基于Hash和History API)
--  VNode的理解  
+-  [VNode的详解](https://segmentfault.com/a/1190000016129036)   
+-  [b站-快速掌握虚拟DOM和diff算法](https://www.bilibili.com/video/BV1dV411a7mT) 
+-  [React性能优化：Virtual Dom原理浅析](https://zhuanlan.zhihu.com/p/36798520)
 -  keep-alive的理解 (用来对组件进行缓存，从而节省性能，由于是一个抽象组件，所以在页面渲染完毕后不会被渲染成一个DOM元素,例如页面的切换不再刷新，钩子的触发顺序created-> mounted-> activated，退出时触发deactivated。当再次进入（前进或者后退）时，只触发activated。)  
 -  [为什么vue的data必须是一个函数](https://www.jianshu.com/p/dc95ce948a07)
    + data return 出一个唯一的独立的对象，不能是一个共享的内存地址的对象
+-  [手写Vue2.0]()
+-  [手写React]()
+
+
 
 ## CSS
 -  BFC  
