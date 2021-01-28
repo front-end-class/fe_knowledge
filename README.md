@@ -4,16 +4,25 @@
 -  let、const、var 的区别有哪些？- var可变量提升，可重复声明，无暂存死区，无块级作用域  
 -  [原型（prototype）、原型链和原型继承](https://zhuanlan.zhihu.com/p/35790971)
 -  [this详解](http://www.inode.club/webframe/javascript/this.html)
+-  [非匿名自执行函数](https://www.jianshu.com/p/561de763348e)
+   + 因为当 JS 解释器在遇到非匿名的立即执行函数时，会创建一个辅助的特定对象，然后将函数名称作为这个对象的属性，因此函数内部才可以访问到 foo，但是这个值又是只读的，所以对它的赋值并不生效，所以打印的结果还是这个函数，并且外部的值也没有发生更改。
    ```js
-   自执行函数：
-   
-   var foo = 1
+   var foo = 1;
    (function foo() {
-       foo = 10
-       console.log(foo)
-   }()) // -> ƒ foo() { foo = 10 ; console.log(foo) }
-   
-   因为当 JS 解释器在遇到非匿名的立即执行函数时，会创建一个辅助的特定对象，然后将函数名称作为这个对象的属性，因此函数内部才可以访问到 foo，但是这个值又是只读的，所以对它的赋值并不生效，所以打印的结果还是这个函数，并且外部的值也没有发生更改。
+      // 'use strict'
+      foo = 10
+      console.log(foo)
+   }()) // 返回function ƒ foo() { foo = 10 ; console.log(foo) }
+
+   —————————转—————————
+
+   specialObject = {};
+   Scope = specialObject + Scope;
+   foo = new FunctionExpression;
+   foo.[[Scope]] = Scope;
+   specialObject.foo = foo; // {DontDelete}, {ReadOnly}
+
+   delete Scope[0]; // remove specialObject from the front of scope chain
    ```
 -  执行上下文
    + 浏览器执行js，首先进入的是一个全局的执行上下文，压入栈顶。
