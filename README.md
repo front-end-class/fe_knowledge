@@ -2,6 +2,7 @@
 
 ## JavaScript
 -  let、const、var 的区别有哪些？- var可变量提升，可重复声明，无暂存死区，无块级作用域  
+-  [原型（prototype）、原型链和原型继承](https://zhuanlan.zhihu.com/p/35790971)
 -  [this详解](http://www.inode.club/webframe/javascript/this.html)
    ```js
    自执行函数：
@@ -155,6 +156,9 @@
        //使用 apply，改变构造函数 this 的指向到新建的对象，这样 obj 就可以访问到构造函数中的属性
 
        return typeof result === 'object' ? result : obj; //返回该对象
+
+       //这里的图片更容易理解   
+       // https://github.com/webfansplz/article/issues/6
    };
    
    newObject(Person, 'name', 'age')
