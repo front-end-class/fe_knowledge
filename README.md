@@ -592,11 +592,11 @@
    + 清除内部浮动
    ```
    
--  flex布局  
+-  [Flexbox布局](https://segmentfault.com/a/1190000017115802) [10分钟理解FlexBox](https://segmentfault.com/a/1190000017347626) 
 -  动画  
 -  BEM  
 -  盒子模型
-
+-  [关于flex-shrink知识](https://segmentfault.com/a/1190000016746670)
 
 ## 工程化
 -  [Monoreopo 前端多项目管理方式（yarn workspaces, lerna）](https://segmentfault.com/a/1190000019309820)
@@ -618,6 +618,9 @@
 ## 浏览器
 -  [图解浏览器的基本工作原理](https://zhuanlan.zhihu.com/p/47407398)
 -  [ESM模块化](https://juejin.cn/post/6854573213985275911)
+-  localhost:3000 与 localhost:5000 的 cookie 信息是否共享？  
+   对于浏览器实现来说，“cookie区分域，而不区分端口，同一个ip下的多个端口下的cookie是共享的！
+
 
 
 ## 微前端
@@ -633,6 +636,12 @@
    + 降低拥塞控制 （TCP连接减少了）
    + 减少了后续请求的延迟（无需再进行握手）
    + 报告错误无需关闭TCP连接
+    
+   ```js
+   // 响应头开启 keep-alive
+   Connection: Keep-Alive
+   Keep-Alive: timeout=5, max=1000
+   ```
 -  浏览器强缓存和协商缓存
    ![来源于互联网](https://user-images.githubusercontent.com/25027560/38223505-d8ab53da-371d-11e8-9263-79814b6971a5.png)   
    HTTP缓存机制要点如下：
@@ -648,7 +657,16 @@
    + Last-Modified其实就是加上资源修改的时间，对应的常用request header为If-Modified-Since，精度为秒。
    + ETag每次修改都会改变，而Last-Modified的精度只到秒，所以ETag更准确，优先级更高，但是需要计算，所以服务端开销更大。
    + 强制缓存和协商缓存都存在的情况下，先判断强制缓存是否生效，如果生效，不用发起请求，直接用缓存。如果强制缓存不生效再发起请求判断协商缓存。
-   
+-  content-type 为 `application/octet-stream`，代表二进制流，一般用以下载文件
+-  Content Security Policy(CSP),只允许加载指定的脚本及样式，最大限度地防止 XSS 攻击，是解决 XSS 的最优解。
+   ```js
+   // 外部脚本可以通过指定域名来限制：Content-Security-Policy: script-src 'self'，self 代表只加载当前域名
+   //Content-Security-Policy: script-src 'nonce-xxxxxxxxxxxxxxxxxx'
+   ```
+-  什么情况下会发送 OPTIONS 请求？  
+   跨域且不是简单请求时就会发送 OPTIONS 请求，比如请求方法是PUT或DELETE，或者Content-Type字段的类型是application/json，CORS请求会在正式通信之前，增加一次HTTP查询请求，称为"预检"请求
+
+
    
 ## Node.js和Deno.js
 -  [《Deno 1.0 你需要了解的》](https://juejin.im/post/5eb8acec6fb9a043383d7610)
