@@ -501,6 +501,40 @@
 -  [关于proxy和symbol特点](https://mp.weixin.qq.com/s/4wt-ulMx6EKcV75W5ioPrw)  
 -  [npm 包管理机制](https://cloud.tencent.com/developer/article/1556014)  
 -  [peerDependencies](https://segmentfault.com/a/1190000022435060)  
+-  箭头函数
+   + 没有自己的this，取决于它外面的“第一个不是箭头函数的函数”的 this，指向调用函数的上一层运行时
+   ```js
+   let obj = {
+   a: 'mon',
+   foo: () => {
+      console.log(this)
+   },
+   }
+
+   obj.foo() // 输出结果: "Window {...}"。obj.foo在调用的时候如果是不使用箭头函数 this 应该指向的是 obj, 输出"{a: "mon", foo: ƒ}"，但是使用了箭头函数，取决于它外面的“第一个不是箭头函数的函数”的 this, 指向的就是全局了，所以输出结果是 "Window {...}"。
+   ```
+   + 没有 arguments，拿的是箭头函数外层函数的 arguments 属性
+   ```js
+   function fun() {
+      return () => [...arguments].length
+   }
+
+   let result = fun(1,2)
+   console.log(result()) // 2
+   ```
+   + 没有构造函数
+   ```js
+   let fun = () => {}
+   let funNew = new fun()
+   // 报错内容 TypeError: fun is not a constructor
+   ```
+   + 没有原型
+   ```js
+   let fun = () => {}
+   console.loh(fun.prototype) // undefined
+   ```
+   + 没有 super 函数，没有原型，自然没有 super
+
 
 ## 算法与数据结构
 -  [前端该如何准备数据结构和算法？](https://juejin.im/post/5d5b307b5188253da24d3cd1)
