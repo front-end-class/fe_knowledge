@@ -177,6 +177,14 @@
    ```js
    // 经典问题：
    for ( var i=1; i<=5; i++) {
+      // 先执行主线程结束才走异步队列，i已经执行到5，所以都返回6
+      setTimeout( function timer() {
+         console.log( i );
+      }, i*1000 );
+   }
+   
+   // 利用let
+   for ( let i=1; i<=5; i++) {
       setTimeout( function timer() {
          console.log( i );
       }, i*1000 );
@@ -374,6 +382,14 @@
    -------------
    String([1,[2,3,[4,5,6,[7,8]]]]).split(',')
    String(["🐷", ["🐶", "🐂"], ["🐎", ["🐑", ["🐲"]], "🐛"]]).split(',')
+   ```
+-  flattenDeep多维数组降维
+   ```js
+   const flattenDeep = (arr) => Array.isArray(arr)
+   ? arr.reduce( (a, b) => [...a, ...flattenDeep(b)] , [])
+   : [arr]
+
+   flattenDeep([1, [[2], [3, [4]], 5]])
    ```
 -  a==1&&a==2&&a==3
    ```js
