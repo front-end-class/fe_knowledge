@@ -605,6 +605,7 @@
 ## 工程化
 -  [Monoreopo 前端多项目管理方式（yarn workspaces, lerna）](https://segmentfault.com/a/1190000019309820)
 -  [Monoreopo工具介绍](https://juejin.cn/post/6913497232687759367)
+-  升级npm7.0自带workspace 
 -  [一种自动生成网页骨架屏的方式](https://github.com/famanoder/dps)
 -  [vite工程化](https://juejin.cn/post/6910014283707318279)
 
@@ -722,6 +723,23 @@
 
 
 
+## 脚手架
+-  [如何搭建一个成熟的脚手架](https://github.com/yokiyokiyoki/ds-cli)
+-  [vue-webpack-boilerplate 通用项目工程](https://github.com/monw3c/vue-wp-cli)
+-  开发脚手架需要的包：
+   + 脚手架工具： [plop](https://plopjs.com/)、[Yeoman](https://yeoman.io/)
+   + 交互输入：[inquirer](http://npm.im/inquirer)、 [enquirer](http://npm.im/enquirer) 、[prompts](https://npm.im/prompts)
+   + 输出美化：[chalk](http://npm.im/chalk)、 [ink](http://npm.im/ink)、[log-symbols着色的符号](https://www.npmjs.com/package/log-symbols)
+   + 加载动画：[ora](http://npm.im/ora)
+   + 基本解析：[meow](http://npm.im/meow)、 [arg](http://npm.im/arg)
+   + 通知插件：[node-notifier](https://www.npmjs.com/package/node-notifier)
+   + 参数解析：[commander](http://npm.im/commander)、[yargs](https://www.npmjs.com/package/yargs)
+   + 操作命令行：[sindresorhus/ansi-escapes](https://github.com/sindresorhus/ansi-escapes)
+   + 输出截断： [sindresorhus/cli-truncate](https://github.com/sindresorhus/cli-truncate)
+   + 下载git模板： [download-git-repo](https://www.npmjs.com/package/download-git-repo)
+   + 开启子线程：node.js自带的child_process
+
+
 ## 其他
 -  前端代码开发完成，咱们是先上线页面，还是先上线静态资源？（消息摘要算法，http://web.jobbole.com/93678/)   
 -  [如何推动前端团队的基础设施建设](https://mp.weixin.qq.com/s/2VSa3xBpy5St8G1v0RjW9g)
@@ -746,12 +764,4 @@
    + 降低开发系统的成本（不需要每个业务都开发一次登录系统和用户状态控制）；
 
    总的来说，大中型web应用，SSO可以带来很多好处，缺点却很少。
--  开发脚手架需要的包：
-   + 脚手架工具： [plop](https://plopjs.com/), [Yeoman](https://yeoman.io/)
-   + 交互输入：[inquirer](http://npm.im/inquirer)、 [enquirer](http://npm.im/enquirer) 、[prompts](https://npm.im/prompts)
-   + 输出美化：[chalk](http://npm.im/chalk)、 [ink](http://npm.im/ink)
-   + 加载动画：[ora](http://npm.im/ora)
-   + 基本解析：[meow](http://npm.im/meow)、 [arg](http://npm.im/arg)
-   + 参数解析：[commander](http://npm.im/commander)、[yargs](https://www.npmjs.com/package/yargs)
-   + 操作命令行：[sindresorhus/ansi-escapes](https://github.com/sindresorhus/ansi-escapes)
-   + 输出截断： [sindresorhus/cli-truncate](https://github.com/sindresorhus/cli-truncate)
+
