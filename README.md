@@ -557,9 +557,13 @@
 -  [数据结构和算法专题](http://www.conardli.top/docs/dataStructure/)
 -  [如何分析时间复杂度?](https://www.cxymsg.com/guide/algorithm.html#%E5%A6%82%E4%BD%95%E5%88%86%E6%9E%90%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6)
 
+
+
 ## 小程序，Uni-app
 -  [小程序状态响应式：你可以零侵入式实现小程序的全局状态管理吗](https://juejin.im/post/5e89768a51882573b2195205)
 -  [Uniapp 从入门到进阶](https://juejin.im/book/5da9d16c5188254796427201)
+
+
 
 ## Vue2.0和Vue3.0
 -  [Vue3.0 有哪些特点](https://juejin.cn/post/6896438269291347976)
@@ -608,6 +612,7 @@
 -  升级npm7.0自带workspace 
 -  [一种自动生成网页骨架屏的方式](https://github.com/famanoder/dps)
 -  [vite工程化](https://juejin.cn/post/6910014283707318279)
+-  [打造小团队前端工程化服务,基本该有都有](https://juejin.cn/post/6867861517603438605)
 
 
 ## Webpack，Rollup，Parcel
@@ -619,6 +624,8 @@
 -  [webpack中loader和plugin的区别](https://www.cnblogs.com/cxyqts/p/13722569.html)
    + loader运行在打包文件之前，文件转换；plugins扩展wp功能，为处理loader无法处理的事物，在整个编译周期都起作用
 -  [webpack 打包原理 ? 看完这篇你就懂了 !](https://github.com/webfansplz/article/issues/38)
+-  [hard-source-webpack-plugin提升构建速度](https://github.com/mzgoddard/hard-source-webpack-plugin)
+-  [带你深度解锁Webpack系列](https://segmentfault.com/a/1190000022205477)
 
 
 ## 低代码
@@ -703,6 +710,7 @@
 ## 自动化探索
 -  [Puppeteer 爬虫实践](https://mp.weixin.qq.com/s?__biz=MzI0NTE5NzYyMw==&mid=2247483769&idx=1&sn=f4d65fe8b60d8870b0a243ad5da48048&scene=21)
 -  [自动化构建部署工具](https://juejin.cn/post/6916302771129942030)
+-  [前端轻量化部署脚手架](https://juejin.cn/post/6844904046986280967)
 
 
 ## 在线电子书
@@ -720,6 +728,7 @@
 -  [SWR - React Hooks library for data fetching](https://swr.vercel.app/)
 -  [form generator表单设计器](https://github.com/JakHuang/form-generator-plugin)
 -  [docz文档生成器](https://www.docz.site/)
+-  [verdaccio私库](https://verdaccio.org/docs/zh-CN)
 
 
 
@@ -737,6 +746,7 @@
    + 操作命令行：[sindresorhus/ansi-escapes](https://github.com/sindresorhus/ansi-escapes)
    + 输出截断： [sindresorhus/cli-truncate](https://github.com/sindresorhus/cli-truncate)
    + 下载git模板： [download-git-repo](https://www.npmjs.com/package/download-git-repo)
+   + Vue cli使用，计算字符串编辑距离算法：[leven](https://github.com/sindresorhus/leven)
    + 开启子线程：node.js自带的child_process
 
 
