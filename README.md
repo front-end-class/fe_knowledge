@@ -553,6 +553,11 @@
    + 没有 super 函数，没有原型，自然没有 super
 
 
+## AST
+-  [AST详解与运用](https://zhuanlan.zhihu.com/p/266697614)
+-  [像玩 jQuery 一样玩 AST](https://juejin.cn/post/6923936548027105293)
+-  [the-super-tiny-compiler](https://github.com/jamiebuilds/the-super-tiny-compiler)
+
 ## 算法与数据结构
 -  [前端该如何准备数据结构和算法？](https://juejin.im/post/5d5b307b5188253da24d3cd1)
 -  [数据结构和算法专题](http://www.conardli.top/docs/dataStructure/)
@@ -566,7 +571,7 @@
 
 
 
-## Vue2.0和Vue3.0
+## Vue、React相关
 -  [Vue3.0 有哪些特点](https://juejin.cn/post/6896438269291347976)
 -  简单讲解下vue2原理，是否有了解vue3的变化 (最主要就是数据劫持，object.defineProperty需要遍历对象的属性作操作，proxy是拦截当前对象作操作。还有其他待补充) [Vue.js 技术揭秘](https://ustbhuangyi.github.io/vue-analysis/)
 -  vuex原理和为什么要使用以及状态持久化(vuex在vue里当作插件引入，并且被数据劫持。持久化可通过store plugins做存储，[vuex-persistedstate](https://github.com/robinvdvleuten/vuex-persistedstate), [IndexedDB](http://www.ruanyifeng.com/blog/2018/07/indexeddb.html)之类)  
@@ -574,6 +579,7 @@
 -  [VNode的详解](https://segmentfault.com/a/1190000016129036)   
 -  [b站-快速掌握虚拟DOM和diff算法](https://www.bilibili.com/video/BV1dV411a7mT) 
 -  [React性能优化：Virtual Dom原理浅析](https://zhuanlan.zhihu.com/p/36798520)
+-  [深入分析虚拟DOM的渲染过程和特性](https://mp.weixin.qq.com/s?__biz=Mzg2NDAzMjE5NQ==&mid=2247484212&idx=1&sn=e4cf00c0c087c34ae2f181e7b2f2b257&chksm=ce6ec798f9194e8e0ef0327e9a4cbb8d1454218609a20663a5ea5fed9e31f4a39b7fb114e117&scene=21#wechat_redirect)
 -  keep-alive的理解 (用来对组件进行缓存，从而节省性能，由于是一个抽象组件，所以在页面渲染完毕后不会被渲染成一个DOM元素,例如页面的切换不再刷新，钩子的触发顺序created-> mounted-> activated，退出时触发deactivated。当再次进入（前进或者后退）时，只触发activated。)  
 -  [为什么vue的data必须是一个函数](https://www.jianshu.com/p/dc95ce948a07)
    + data return 出一个唯一的独立的对象，不能是一个共享的内存地址的对象
@@ -582,7 +588,7 @@
 -  [React 中的 ErrorBoundary 实用性](https://github.com/shfshanyue/Daily-Question/issues/11)
 -  [React hooks，它带来了那些便利](https://segmentfault.com/a/1190000022163955)
 -  [React 项目性能分析及优化](https://github.com/brickspert/blog/issues/36)
-
+-  [从Mixin到HOC再到Hook](https://mp.weixin.qq.com/s?__biz=Mzg2NDAzMjE5NQ==&mid=2247484193&idx=1&sn=0c152afb3566f2b600b0e218d5d24017&chksm=ce6ec78df9194e9b3e0e4f18706fd84be22f0f84d1e7554892e169a30265c6fa154731c1c7a3&scene=21#wechat_redirect)
 
 
 
