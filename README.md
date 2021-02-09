@@ -650,6 +650,7 @@
 -  [统一运营工作台的解决方案](https://mp.weixin.qq.com/s/xmcXz5GWSEYFy18APPHwlg)
 -  [万字解析微前端、微前端框架qiankun以及源码](https://mp.weixin.qq.com/s/_A5OfB4Xb3H_97r-bKlz0g) 
 -  [深度：从零编写一个微前端框架](https://mp.weixin.qq.com/s/A0FR3h5Cvd0MWD5Gw_L19A) 
+-  [几种微前端方案探究](https://vleedesigntheory.github.io/tech/front/micro20210125.htm)
 
 
 ## HTTP和HTTPS
@@ -734,6 +735,7 @@
 
 ## 脚手架
 -  [如何搭建一个成熟的脚手架](https://github.com/yokiyokiyoki/ds-cli)
+-  [走进Vue-cli源码](https://www.jianshu.com/p/749b22170b7b)
 -  [vue-webpack-boilerplate 通用项目工程](https://github.com/monw3c/vue-wp-cli)
 -  开发脚手架需要的包：
    + 脚手架工具： [plop](https://plopjs.com/)、[Yeoman](https://yeoman.io/)
@@ -746,7 +748,7 @@
    + 操作命令行：[sindresorhus/ansi-escapes](https://github.com/sindresorhus/ansi-escapes)
    + 输出截断： [sindresorhus/cli-truncate](https://github.com/sindresorhus/cli-truncate)
    + 下载git模板： [download-git-repo](https://www.npmjs.com/package/download-git-repo)
-   + Vue cli使用，计算字符串编辑距离算法：[leven](https://github.com/sindresorhus/leven)
+   + Vue-cli使用，计算字符串编辑距离算法：[leven](https://github.com/sindresorhus/leven)
    + 开启子线程：node.js自带的child_process
 
 
