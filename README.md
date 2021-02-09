@@ -209,7 +209,8 @@
 -  事件模型(浏览器区别，事件代理，内存问题)  
 -  垃圾回收和内存泄露   https://juejin.im/post/5d0706a6f265da1bc23f77a9  https://blog.csdn.net/weixin_42674359/article/details/88798648  https://blog.csdn.net/weixin_38098195/article/details/81135137 （实操）https://cloud.tencent.com/developer/article/1356698
 -  setInterval、setTimeout和requestAnimationFrame https://gyufei.github.io/2018/09/15/requestAnimationFrame/
--  解释下事件任务队列(event loop) 
+-  解释下事件任务队列(event loop)   
+    [最详细清晰的一篇文章](https://juejin.cn/post/6844903919789801486)
 >>script(宏任务) - 清空微任务队列 - 执行一个宏任务  - 清空微任务队列 - 执行一个宏任务， 如此往复。  
    1.先执行script里的同步代码（此时是宏任务）。碰到异步任务，放到任务队列。  
    2.查找任务队列有没有微任务，有就把此时的微任务全部按顺序执行 （这就是为什么promise会比setTimeout先执行，因为先执行的宏任务是同步代码，setTimeout被放进任务队列了，setTimeout又是宏任务，在它之前先得执行微任务(就比如promise)）。  
