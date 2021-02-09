@@ -517,7 +517,8 @@
 -  [Tree-Shaking原理实践](https://cloud.tencent.com/developer/article/1688857)  
 -  [关于proxy和symbol特点](https://mp.weixin.qq.com/s/4wt-ulMx6EKcV75W5ioPrw)  
 -  [npm 包管理机制](https://cloud.tencent.com/developer/article/1556014)  
--  [peerDependencies](https://segmentfault.com/a/1190000022435060)  
+-  [peerDependencies](https://segmentfault.com/a/1190000022435060) 
+-  [package.json 知多少？](https://mp.weixin.qq.com/s?__biz=Mzg2NDAzMjE5NQ==&mid=2247484994&idx=1&sn=7da1108c3858ad71c42bcb36f8ade9de&chksm=ce6ec2eef9194bf863bb5ddeb9cb5fa7507e3a5f27b6dde0f61946c2c378eb89d8f562424ca7&scene=178&cur_album_id=1403155327595495424#rd) 
 -  箭头函数
    + 没有自己的this，取决于它外面的“第一个不是箭头函数的函数”的 this，指向调用函数的上一层运行时
    ```js
@@ -588,6 +589,7 @@
 -  [React 中的 ErrorBoundary 实用性](https://github.com/shfshanyue/Daily-Question/issues/11)
 -  [React hooks，它带来了那些便利](https://segmentfault.com/a/1190000022163955)
 -  [React 项目性能分析及优化](https://github.com/brickspert/blog/issues/36)
+-  [网页性能提升5倍的 — 构建优化篇](https://mp.weixin.qq.com/s?__biz=Mzg2NDAzMjE5NQ==&mid=2247487514&idx=1&sn=357eed76ec82c1beb0a30a5e8e2008fb&chksm=ce6ed4b6f9195da0870d343b7efd3d13fd2e8e25ef9ddc5a400cd9a002312c07c7d095964613&scene=178&cur_album_id=1403155327595495424#rd)
 -  [从Mixin到HOC再到Hook](https://mp.weixin.qq.com/s?__biz=Mzg2NDAzMjE5NQ==&mid=2247484193&idx=1&sn=0c152afb3566f2b600b0e218d5d24017&chksm=ce6ec78df9194e9b3e0e4f18706fd84be22f0f84d1e7554892e169a30265c6fa154731c1c7a3&scene=21#wechat_redirect)
 
 
