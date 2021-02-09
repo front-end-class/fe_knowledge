@@ -712,6 +712,7 @@
 -  [Puppeteer 爬虫实践](https://mp.weixin.qq.com/s?__biz=MzI0NTE5NzYyMw==&mid=2247483769&idx=1&sn=f4d65fe8b60d8870b0a243ad5da48048&scene=21)
 -  [自动化构建部署工具](https://juejin.cn/post/6916302771129942030)
 -  [前端轻量化部署脚手架](https://juejin.cn/post/6844904046986280967)
+-  [小工具实现更新本地iconfont](https://github.com/xianzhiyun/iconfont-script)
 
 
 ## 在线电子书
