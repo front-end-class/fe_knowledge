@@ -584,6 +584,7 @@
 -  keep-alive的理解 (用来对组件进行缓存，从而节省性能，由于是一个抽象组件，所以在页面渲染完毕后不会被渲染成一个DOM元素,例如页面的切换不再刷新，钩子的触发顺序created-> mounted-> activated，退出时触发deactivated。当再次进入（前进或者后退）时，只触发activated。)  
 -  [为什么vue的data必须是一个函数](https://www.jianshu.com/p/dc95ce948a07)
    + data return 出一个唯一的独立的对象，不能是一个共享的内存地址的对象
+-  [Vue源码解析之nextTick](https://juejin.cn/post/6844903728995106823)
 -  [手写Vue2.0]()
 -  [手写React]()
 -  [React 中的 ErrorBoundary 实用性](https://github.com/shfshanyue/Daily-Question/issues/11)
