@@ -625,6 +625,7 @@
 -  [打造小团队前端工程化服务,基本该有都有](https://juejin.cn/post/6867861517603438605)
 
 
+
 ## Webpack，Rollup，Parcel
 -  Webpack 对比 Rollup
    + Webpack的优势在于它更全面，基于“一切皆模块”的思想而衍生出丰富的loader和plugin可以满足各种使用场景；
@@ -636,6 +637,8 @@
 -  [webpack 打包原理 ? 看完这篇你就懂了 !](https://github.com/webfansplz/article/issues/38)
 -  [hard-source-webpack-plugin提升构建速度](https://github.com/mzgoddard/hard-source-webpack-plugin)
 -  [带你深度解锁Webpack系列](https://segmentfault.com/a/1190000022205477)
+-  [Rollup.js](https://rollupjs.org/)
+
 
 
 ## 低代码
@@ -723,6 +726,10 @@
 -  [自动化构建部署工具](https://juejin.cn/post/6916302771129942030)
 -  [前端轻量化部署脚手架](https://juejin.cn/post/6844904046986280967)
 -  [小工具实现更新本地iconfont](https://github.com/xianzhiyun/iconfont-script)
+-  [微信小程序工程化之持续集成方案](https://zhuanlan.zhihu.com/p/89055847)
+-  [小程序多端编译原理](https://juejin.cn/post/6844904094981685262)
+
+
 
 
 ## 在线电子书
