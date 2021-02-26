@@ -626,7 +626,7 @@
 
 
 
-## Webpack，Rollup，Parcel
+## Webpack，Rollup，Parcel，Snowpack，Vite
 -  Webpack 对比 Rollup
    + Webpack的优势在于它更全面，基于“一切皆模块”的思想而衍生出丰富的loader和plugin可以满足各种使用场景；
    + 而Rollup则更像一把 手术刀，它更专注于JavaScript的打包。当然Rollup也支持许多其他类型的模块，但是总体而言在通用性上还是不如Webpack。
@@ -639,6 +639,8 @@
 -  [带你深度解锁Webpack系列](https://segmentfault.com/a/1190000022205477)
 -  [Rollup.js](https://rollupjs.org/)
 -  [实现一个 webpack loader 和 webpack plugin](https://juejin.cn/post/6871239792558866440)
+-  [snowpack](https://www.snowpack.dev/tutorials/quick-start)
+
 
 
 ## 低代码
@@ -825,6 +827,18 @@
 -  [verdaccio私库](https://verdaccio.org/docs/zh-CN)
 
 
+## 规范工具
+-  [Standardjs](https://standardjs.com/readme-zhcn.html)
+-  [Airbnb-中文版](https://github.com/lin-123/javascript)
+-  [Stylelint](https://stylelint.io/)
+-  [ESLint](https://eslint.org/)
+-  git commit之 husky，lint-staged
+
+
+## 前端监控
+-  [Sentry 部署应用实践](https://segmentfault.com/a/1190000021602782)
+
+
 
 ## 脚手架
 -  [如何搭建一个成熟的脚手架](https://github.com/yokiyokiyoki/ds-cli)
@@ -844,6 +858,21 @@
    + Vue-cli使用，计算字符串编辑距离算法：[leven](https://github.com/sindresorhus/leven)
    + 开启子线程：node.js自带的child_process
 
+
+## Shell命令
+-  tree  
+   列出目录结构,更多功能查看[文档](https://wangchujiang.com/linux-command/c/tree.html)
+   ```bash
+   $ tree -L 2 -I 'node_modules' # 目录结构层级为2，忽略node_modules
+   ├── app.js
+   ├── dist
+   ├── f.yml
+   ├── package.json
+   └── src
+      ├── detail
+      ├── index
+      └── layout
+   ```
 
 ## 其他
 -  前端代码开发完成，咱们是先上线页面，还是先上线静态资源？（消息摘要算法，http://web.jobbole.com/93678/)   
@@ -867,6 +896,5 @@
    + 方便统一管理用户；
    + 有利于引流；
    + 降低开发系统的成本（不需要每个业务都开发一次登录系统和用户状态控制）；
-
    总的来说，大中型web应用，SSO可以带来很多好处，缺点却很少。
 
