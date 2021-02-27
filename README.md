@@ -637,10 +637,10 @@
 -  [webpack 打包原理 ? 看完这篇你就懂了 !](https://github.com/webfansplz/article/issues/38)
 -  [hard-source-webpack-plugin提升构建速度](https://github.com/mzgoddard/hard-source-webpack-plugin)
 -  [带你深度解锁Webpack系列](https://segmentfault.com/a/1190000022205477)
--  [Rollup.js](https://rollupjs.org/)
+-  [Rollup](https://rollupjs.org/)
+-  [Snowpack](https://www.snowpack.dev/)
 -  [实现一个 webpack loader 和 webpack plugin](https://juejin.cn/post/6871239792558866440)
--  [snowpack](https://www.snowpack.dev/tutorials/quick-start)
-
+-  [实现一个真正的babel插件（不仅仅是替换字符）及 ast操作原理](https://zhuanlan.zhihu.com/p/91948992)
 
 
 ## 低代码
@@ -697,6 +697,17 @@
    + ETag每次修改都会改变，而Last-Modified的精度只到秒，所以ETag更准确，优先级更高，但是需要计算，所以服务端开销更大。
    + 强制缓存和协商缓存都存在的情况下，先判断强制缓存是否生效，如果生效，不用发起请求，直接用缓存。如果强制缓存不生效再发起请求判断协商缓存。
 -  content-type 为 `application/octet-stream`，代表二进制流，一般用以下载文件
+-  XSS和CSRF理解
+   + XSS：用户过分信任网站，放任来自浏览器地址栏代表的那个网站代码在自己本地任意执行。如果没有浏览器的安全机制限制，XSS代码可以在用户浏览器为所欲为；
+   + CSRF：网站过分信任用户，放任来自所谓通过访问控制机制的代表合法用户的请求执行网站的某个特定功能。
+-  XSS安全问题防范
+   1. HttpOnly，https，Same-Site，HostOnly
+   2. 输入特殊字符过滤 `<`,`>`等 和 检查 `HtmlEncode`、`JavaScriptEncode` 
+-  CSRF安全问题防范
+   1. Referer 源的检测
+   2. 验证码
+   3. token
+   4. 设置SamesiteCookie为Strict,但是子域名也将无法共享你的cookie
 -  Content Security Policy(CSP),只允许加载指定的脚本及样式，最大限度地防止 XSS 攻击，是解决 XSS 的最优解。
    ```js
    // 外部脚本可以通过指定域名来限制：Content-Security-Policy: script-src 'self'，self 代表只加载当前域名
@@ -714,6 +725,8 @@
 -  [Eggjs](https://github.com/eggjs/egg)
 -  [Nestjs](https://github.com/nestjs/nest)
 -  [Darukjs](https://github.com/darukjs/daruk)
+
+
 
 ## 实用代码
 -  [JavaScript实现base64编码解码](https://www.cnblogs.com/mofish/archive/2012/02/25/2367858.html)
@@ -795,6 +808,195 @@
 
    export default request;
    ```
+-  常规校验
+   ```js
+   是否为手机号码： /^1[3|4|5|6|7|8][0-9]{9}$/
+   是否全为数字： /^[0-9]+$/
+   是否为邮箱：/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/
+   是否为身份证：/^(^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$)|(^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])((\d{4})|\d{3}[Xx])$)$/
+   是否为Url：/[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/
+   是否为IP： /((2(5[0-5]|[0-4]\d))|[0-1]?\d{1,2})(\.((2(5[0-5]|[0-4]\d))|[0-1]?\d{1,2})){3}/
+   ```
+-  特殊字符转义之HTMLEncode
+   ```js
+   const HtmlEncode = (str) => {
+      // 设置 16 进制编码，方便拼接
+      const hex = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
+      // 赋值需要转换的HTML
+      const preescape = str;
+      let escaped = "";
+      for (let i = 0; i < preescape.length; i++) {
+         // 获取每个位置上的字符
+         let p = preescape.charAt(i);
+         // 重新编码组装
+         escaped = escaped + escapeCharx(p);
+      }
+
+      return escaped;
+      // HTMLEncode 主要函数
+      // original 为每次循环出来的字符
+      function escapeCharx(original) {
+         // 默认查到这个字符编码
+         let found = true;
+         // charCodeAt 获取 16 进制字符编码
+         const thechar = original.charCodeAt(0);
+         switch (thechar) {
+               case 10: return "<br/>"; break; // 新的一行
+               case 32: return "&nbsp;"; break; // space
+               case 34: return "&quot;"; break; // "
+               case 38: return "&amp;"; break; // &
+               case 39: return "&#x27;"; break; // '
+               case 47: return "&#x2F;"; break; // /
+               case 60: return "&lt;"; break; // <
+               case 62: return "&gt;"; break; // >
+               case 198: return "&AElig;"; break; // Æ
+               case 193: return "&Aacute;"; break; // Á
+               case 194: return "&Acirc;"; break; // Â
+               case 192: return "&Agrave;"; break; // À
+               case 197: return "&Aring;"; break; // Å
+               case 195: return "&Atilde;"; break; // Ã
+               case 196: return "&Auml;"; break; // Ä
+               case 199: return "&Ccedil;"; break; // Ç
+               case 208: return "&ETH;"; break; // Ð
+               case 201: return "&Eacute;"; break; // É
+               case 202: return "&Ecirc;"; break;
+               case 200: return "&Egrave;"; break;
+               case 203: return "&Euml;"; break;
+               case 205: return "&Iacute;"; break;
+               case 206: return "&Icirc;"; break;
+               case 204: return "&Igrave;"; break;
+               case 207: return "&Iuml;"; break;
+               case 209: return "&Ntilde;"; break;
+               case 211: return "&Oacute;"; break;
+               case 212: return "&Ocirc;"; break;
+               case 210: return "&Ograve;"; break;
+               case 216: return "&Oslash;"; break;
+               case 213: return "&Otilde;"; break;
+               case 214: return "&Ouml;"; break;
+               case 222: return "&THORN;"; break;
+               case 218: return "&Uacute;"; break;
+               case 219: return "&Ucirc;"; break;
+               case 217: return "&Ugrave;"; break;
+               case 220: return "&Uuml;"; break;
+               case 221: return "&Yacute;"; break;
+               case 225: return "&aacute;"; break;
+               case 226: return "&acirc;"; break;
+               case 230: return "&aelig;"; break;
+               case 224: return "&agrave;"; break;
+               case 229: return "&aring;"; break;
+               case 227: return "&atilde;"; break;
+               case 228: return "&auml;"; break;
+               case 231: return "&ccedil;"; break;
+               case 233: return "&eacute;"; break;
+               case 234: return "&ecirc;"; break;
+               case 232: return "&egrave;"; break;
+               case 240: return "&eth;"; break;
+               case 235: return "&euml;"; break;
+               case 237: return "&iacute;"; break;
+               case 238: return "&icirc;"; break;
+               case 236: return "&igrave;"; break;
+               case 239: return "&iuml;"; break;
+               case 241: return "&ntilde;"; break;
+               case 243: return "&oacute;"; break;
+               case 244: return "&ocirc;"; break;
+               case 242: return "&ograve;"; break;
+               case 248: return "&oslash;"; break;
+               case 245: return "&otilde;"; break;
+               case 246: return "&ouml;"; break;
+               case 223: return "&szlig;"; break;
+               case 254: return "&thorn;"; break;
+               case 250: return "&uacute;"; break;
+               case 251: return "&ucirc;"; break;
+               case 249: return "&ugrave;"; break;
+               case 252: return "&uuml;"; break;
+               case 253: return "&yacute;"; break;
+               case 255: return "&yuml;"; break;
+               case 162: return "&cent;"; break;
+               case '\r': break;
+               default: found = false; break;
+         }
+         if (!found) {
+               // 如果和上面内容不匹配且字符编码大于127的话，用unicode(非常严格模式)
+               if (thechar > 127) {
+                  let c = thechar;
+                  let a4 = c % 16;
+                  c = Math.floor(c / 16);
+                  let a3 = c % 16;
+                  c = Math.floor(c / 16);
+                  let a2 = c % 16;
+                  c = Math.floor(c / 16);
+                  let a1 = c % 16;
+                  return "&#x" + hex[a1] + hex[a2] + hex[a3] + hex[a4] + ";";
+               } else {
+                  return original;
+               }
+         }
+      }
+   }
+   ```
+-  特殊字符转义之JavaScriptEncode 
+   ```js
+   //使用“\”对特殊字符进行转义，除数字字母之外，小于127使用16进制“\xHH”的方式进行编码，大于用unicode（非常严格模式）。
+   // 大部分代码和上面一样，我就不写注释了
+   const JavaScriptEncode = function (str) {
+      const hex = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
+      const preescape = str;
+      let escaped = "";
+      for (let i = 0; i < preescape.length; i++) {
+         escaped = escaped + encodeCharx(preescape.charAt(i));
+      }
+      return escaped;
+      // 小于127转换成十六进制
+      function changeTo16Hex(charCode) {
+         return "\\x" + charCode.charCodeAt(0).toString(16);
+      }
+      function encodeCharx(original) {
+         let found = true;
+         const thecharchar = original.charAt(0);
+         const thechar = original.charCodeAt(0);
+         switch (thecharchar) {
+               case '\n': return "\\n"; break; //newline
+               case '\r': return "\\r"; break; //Carriage return
+               case '\'': return "\\'"; break;
+               case '"': return "\\\""; break;
+               case '\&': return "\\&"; break;
+               case '\\': return "\\\\"; break;
+               case '\t': return "\\t"; break;
+               case '\b': return "\\b"; break;
+               case '\f': return "\\f"; break;
+               case '/': return "\\x2F"; break;
+               case '<': return "\\x3C"; break;
+               case '>': return "\\x3E"; break;
+               default: found = false; break;
+         }
+         if (!found) {
+               if (thechar > 47 && thechar < 58) { //数字
+                  return original;
+               }
+               if (thechar > 64 && thechar < 91) { //大写字母
+                  return original;
+               }
+               if (thechar > 96 && thechar < 123) { //小写字母
+                  return original;
+               }
+               if (thechar > 127) { //大于127用unicode
+                  let c = thechar;
+                  let a4 = c % 16;
+                  c = Math.floor(c / 16);
+                  let a3 = c % 16;
+                  c = Math.floor(c / 16);
+                  let a2 = c % 16;
+                  c = Math.floor(c / 16);
+                  let a1 = c % 16;
+                  return "\\u" + hex[a1] + hex[a2] + hex[a3] + hex[a4] + "";
+               } else {
+                  return changeTo16Hex(original);
+               }
+         }
+      }
+   }
+   ```
+
 
 
 
@@ -805,7 +1007,8 @@
 -  [小工具实现更新本地iconfont](https://github.com/xianzhiyun/iconfont-script)
 -  [微信小程序工程化之持续集成方案](https://zhuanlan.zhihu.com/p/89055847)
 -  [小程序多端编译原理](https://juejin.cn/post/6844904094981685262)
-
+-  [Electron + Puppeteer + Robotjs 实现工作自动化
+神说要有光](https://zhuanlan.zhihu.com/p/197737856)
 
 
 
@@ -825,6 +1028,8 @@
 -  [form generator表单设计器](https://github.com/JakHuang/form-generator-plugin)
 -  [docz文档生成器](https://www.docz.site/)
 -  [verdaccio私库](https://verdaccio.org/docs/zh-CN)
+-  [Carbon美化代码片段](https://carbon.now.sh/)
+-  [SwitchHosts host管理工具](https://github.com/oldj/SwitchHosts)
 
 
 ## 规范工具
@@ -832,7 +1037,22 @@
 -  [Airbnb-中文版](https://github.com/lin-123/javascript)
 -  [Stylelint](https://stylelint.io/)
 -  [ESLint](https://eslint.org/)
+-  [Commitlint](https://github.com/conventional-changelog/commitlint)
 -  git commit之 husky，lint-staged
+   ```js
+   "gitHooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E GIT_PARAMS"
+   },
+   "lint-staged": {
+      "*.js": [
+         "vue-cli-service lint"
+      ],
+      "*.vue": [
+         "vue-cli-service lint"
+      ]
+   }
+   ```
 
 
 ## 前端监控
@@ -847,6 +1067,7 @@
 -  开发脚手架需要的包：
    + 脚手架工具： [plop](https://plopjs.com/)、[Yeoman](https://yeoman.io/)
    + 交互输入：[inquirer](http://npm.im/inquirer)、 [enquirer](http://npm.im/enquirer) 、[prompts](https://npm.im/prompts)
+   + 版本检测：[semver](https://github.com/npm/node-semver)
    + 输出美化：[chalk](http://npm.im/chalk)、 [ink](http://npm.im/ink)、[log-symbols着色的符号](https://www.npmjs.com/package/log-symbols)
    + 加载动画：[ora](http://npm.im/ora)
    + 基本解析：[meow](http://npm.im/meow)、 [arg](http://npm.im/arg)
