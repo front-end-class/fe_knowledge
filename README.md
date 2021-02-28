@@ -285,15 +285,9 @@
 -  了解哪些数据结构和算法  
 -  [前端性能优化，长列表如何优化](https://juejin.im/post/5b960fcae51d450e9d645c5f)  
 -  [前端缓存，浏览器缓存](https://mp.weixin.qq.com/s/Q2h1EEKubAXkaM4g85Mkrw)    
--  前端安全相关问题  https://mp.weixin.qq.com/s/tgIWXcfzswcKcKcb-Dzt_g https://juejin.im/post/5bad9140e51d450e935c6d64
 -  MVC和MVVM的区别  
 -  函数式编程([高阶函数，高阶组件](https://blog.csdn.net/mapbar_front/article/details/79697863))  
 -  装饰器模式 https://segmentfault.com/a/1190000018277217  
--  webpack js分包的操作，它是如何压缩前端代码  
--  [从零实现webpack热更新 HMR](https://juejin.im/post/5df36ffd518825124d6c1765)
--  [深入浅出 Babel 上篇：架构和原理 + 实战](https://juejin.im/post/5d94bfbf5188256db95589be)  
-   ![](https://user-gold-cdn.xitu.io/2019/10/2/16d8d0cd5a3f3a0c)
--  [深入浅出 Babel 下篇：既生 Plugin 何生 Macros](https://juejin.im/post/5da12397e51d4578364f6ffa)
 -  ssr，pwa的了解  
 -  electron(electron-vue)的了解 (基于h5技术开发的混合桌面应用 http://electronjs.org/docs) 
 -  koa2的原理，是否了解其他的框架？(不局限于nodejs)  
@@ -641,6 +635,11 @@
 -  [Snowpack](https://www.snowpack.dev/)
 -  [实现一个 webpack loader 和 webpack plugin](https://juejin.cn/post/6871239792558866440)
 -  [实现一个真正的babel插件（不仅仅是替换字符）及 ast操作原理](https://zhuanlan.zhihu.com/p/91948992)
+-  [webpack js分包的操作，它是如何压缩前端代码](https://www.timsrc.com/article/21/bundle-spliting)  
+-  [从零实现webpack热更新 HMR](https://juejin.im/post/5df36ffd518825124d6c1765)
+-  [深入浅出 Babel 上篇：架构和原理 + 实战](https://juejin.im/post/5d94bfbf5188256db95589be)  
+   ![](https://user-gold-cdn.xitu.io/2019/10/2/16d8d0cd5a3f3a0c)
+-  [深入浅出 Babel 下篇：既生 Plugin 何生 Macros](https://juejin.im/post/5da12397e51d4578364f6ffa)
 
 
 ## 低代码
@@ -708,6 +707,7 @@
    2. 验证码
    3. token
    4. 设置SamesiteCookie为Strict,但是子域名也将无法共享你的cookie
+-  [前端安全相关问题](https://mp.weixin.qq.com/s/tgIWXcfzswcKcKcb-Dzt_g)
 -  Content Security Policy(CSP),只允许加载指定的脚本及样式，最大限度地防止 XSS 攻击，是解决 XSS 的最优解。
    ```js
    // 外部脚本可以通过指定域名来限制：Content-Security-Policy: script-src 'self'，self 代表只加载当前域名
