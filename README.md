@@ -583,9 +583,13 @@
 -  [手写React]()
 -  [React 中的 ErrorBoundary 实用性](https://github.com/shfshanyue/Daily-Question/issues/11)
 -  [React hooks，它带来了那些便利](https://segmentfault.com/a/1190000022163955)
+-  [一文归纳 React Hooks 常用场景](https://juejin.cn/post/6918896729366462471)
+-  [10分钟教你手写8个常用的自定义hooks](https://juejin.cn/post/6844904074433789959)
+-  [用好这9个hooks，所向披靡](https://juejin.cn/post/6895966927500345351)
 -  [React 项目性能分析及优化](https://github.com/brickspert/blog/issues/36)
 -  [网页性能提升5倍 — 构建优化篇](https://mp.weixin.qq.com/s?__biz=Mzg2NDAzMjE5NQ==&mid=2247487514&idx=1&sn=357eed76ec82c1beb0a30a5e8e2008fb&chksm=ce6ed4b6f9195da0870d343b7efd3d13fd2e8e25ef9ddc5a400cd9a002312c07c7d095964613&scene=178&cur_album_id=1403155327595495424#rd)
 -  [从Mixin到HOC再到Hook](https://mp.weixin.qq.com/s?__biz=Mzg2NDAzMjE5NQ==&mid=2247484193&idx=1&sn=0c152afb3566f2b600b0e218d5d24017&chksm=ce6ec78df9194e9b3e0e4f18706fd84be22f0f84d1e7554892e169a30265c6fa154731c1c7a3&scene=21#wechat_redirect)
+-  [轻烤 React 核心机制：React Fiber 与 Reconciliation](https://juejin.cn/post/6891242214324699143)
 
 
 
@@ -1063,6 +1067,7 @@
 ## 脚手架
 -  [如何搭建一个成熟的脚手架](https://github.com/yokiyokiyoki/ds-cli)
 -  [走进Vue-cli源码](https://www.jianshu.com/p/749b22170b7b)
+-  [Vue CLI 是如何实现的](https://juejin.cn/post/6916303253487484942)
 -  [vue-webpack-boilerplate 通用项目工程](https://github.com/monw3c/vue-wp-cli)
 -  开发脚手架需要的包：
    + 脚手架工具： [plop](https://plopjs.com/)、[Yeoman](https://yeoman.io/)
