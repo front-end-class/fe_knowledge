@@ -650,6 +650,7 @@
 -  [何谓低代码开发](https://juejin.cn/post/6918355418326499341)
 -  [amis](https://baidu.gitee.io/amis/zh-CN/docs/index)
 -  [page-schema-player](https://github.com/ufologist/page-schema-player)
+-  [json-schema](https://json-schema.org/understanding-json-schema/index.html)
 
 
 
@@ -662,7 +663,8 @@
 
 ## Nginx
 -  [五分钟看懂 Nginx 负载均衡](https://mp.weixin.qq.com/s/u-XbBwGxHrhJGiMiiqz26w)
-
+-  [理解X-Forwarded-For与防范](https://juejin.cn/post/6844904174132396045)
+-  [egg.js前置代理模式](https://eggjs.org/zh-cn/tutorials/proxy.html)
 
 ## 微前端
 -  [统一运营工作台的解决方案](https://mp.weixin.qq.com/s/xmcXz5GWSEYFy18APPHwlg)
@@ -1013,6 +1015,7 @@
 -  [小程序多端编译原理](https://juejin.cn/post/6844904094981685262)
 -  [Electron + Puppeteer + Robotjs 实现工作自动化
 神说要有光](https://zhuanlan.zhihu.com/p/197737856)
+-  [VuePress + Travis CI + Github Pages 全自动上线文档](https://juejin.cn/post/6844903869558816781)
 
 
 
