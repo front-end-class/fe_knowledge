@@ -546,7 +546,17 @@
    console.loh(fun.prototype) // undefined
    ```
    + 没有 super 函数，没有原型，自然没有 super
+-  [script defer和async的区别](https://segmentfault.com/q/1010000000640869)  
 
+   默认情况下，脚本的下载和执行将会按照文档的先后顺序同步进行。当脚本下载和执行的时候，文档解析就会被阻塞，在脚本下载和执行完成之后文档才能往下继续进行解析。
+
+   下面是async和defer两者区别：
+
+   - 当script中有defer属性时，脚本的加载过程和文档加载是异步发生的，等到文档解析完(DOMContentLoaded事件发生)脚本才开始执行。
+
+   - 当script有async属性时，脚本的加载过程和文档加载也是异步发生的。但脚本下载完成后会停止HTML解析，执行脚本，脚本解析完继续HTML解析。
+
+   - 当script同时有async和defer属性时，执行效果和async一致。
 
 ## AST
 -  [AST详解与运用](https://zhuanlan.zhihu.com/p/266697614)
@@ -563,7 +573,8 @@
 ## 小程序，Uni-app
 -  [小程序状态响应式：你可以零侵入式实现小程序的全局状态管理吗](https://juejin.im/post/5e89768a51882573b2195205)
 -  [Uniapp 从入门到进阶](https://juejin.im/book/5da9d16c5188254796427201)
-
+-  [mp-html 小程序富文本组件](https://github.com/jin-yufeng/mp-html)
+-  [wxparse](https://github.com/icindy/wxparse)
 
 
 ## Vue、React相关
@@ -614,6 +625,8 @@
 -  盒子模型
 -  [关于flex-shrink知识](https://segmentfault.com/a/1190000016746670)
 
+
+
 ## 工程化
 -  [Monoreopo 前端多项目管理方式（yarn workspaces, lerna）](https://segmentfault.com/a/1190000019309820)
 -  [Monoreopo工具介绍](https://juejin.cn/post/6913497232687759367)
@@ -644,6 +657,12 @@
 -  [深入浅出 Babel 上篇：架构和原理 + 实战](https://juejin.im/post/5d94bfbf5188256db95589be)  
    ![](https://user-gold-cdn.xitu.io/2019/10/2/16d8d0cd5a3f3a0c)
 -  [深入浅出 Babel 下篇：既生 Plugin 何生 Macros](https://juejin.im/post/5da12397e51d4578364f6ffa)
+
+
+
+## 性能优化
+-  [前端性能优化](https://zhuanlan.zhihu.com/p/113864878)
+-  图片懒加载关键 getBoundingClientRect
 
 
 ## 低代码
