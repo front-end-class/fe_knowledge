@@ -173,7 +173,7 @@
    newObject(Person, 'name', 'age')
    ```
 -  闭包原理和作用  
-   + 函数里的子函数，该函数可以是匿名函数，该子函数能够读写父函数的局部变量。
+   + 函数里的子函数，该函数可以是匿名函数，该子函数能够读写父函数的局部变量，并且被全局作用域引用。
    ```js
    // 经典问题：
    for ( var i=1; i<=5; i++) {
@@ -181,6 +181,26 @@
       setTimeout( function timer() {
          console.log( i );
       }, i*1000 );
+   }
+
+   // 自执行函数
+   for ( var i=1; i<=5; i++) {
+      (function(j){
+         setTimeout( function timer() {
+         console.log( j );
+      }, j*1000 )
+      })(i)
+   }
+
+   // 定义一个函数
+   function st(j){
+      setTimeout( function() {
+         console.log( j );
+      }, j*1000 )
+   }
+   for ( var i=1; i<=5; i++) {
+      // 让st产生一个AO对象，并且形参引用至外层for循环的作用域，产生一个闭包
+      st(i)
    }
    
    // 利用let
