@@ -236,6 +236,64 @@
    2.查找任务队列有没有微任务，有就把此时的微任务全部按顺序执行 （这就是为什么promise会比setTimeout先执行，因为先执行的宏任务是同步代码，setTimeout被放进任务队列了，setTimeout又是宏任务，在它之前先得执行微任务(就比如promise)）。  
    3.执行一个宏任务（先进到队列中的那个宏任务），再把这次宏任务里的宏任务和微任务放到任务队列。  
    4.一直重复2、3步骤  
+-  setTimeout，setImmediate谁先执行？
+   setImmediate和process.nextTick为Node环境下常用的方法（IE11支持setImmediate），所以，后续的分析都基于Node宿主。
+
+   Node.js是运行在服务端的js，虽然用到也是V8引擎，但由于服务目的和环境不同，导致了它的API与原生JS有些区别，其Event Loop还要处理一些I/O，比如新的网络连接等，所以与浏览器Event Loop不太一样。
+
+   执行顺序如下：
+
+   1. timers: 执行setTimeout和setInterval的回调
+   2. pending callbacks: 执行延迟到下一个循环迭代的 I/O 回调
+   3. idle, prepare: 仅系统内部使用
+   4. poll: 检索新的 I/O 事件;执行与 I/O 相关的回调。事实上除了其他几个阶段处理的事情，其他几乎所有的异步都在这个阶段处理。
+   5. check: setImmediate在这里执行
+   6. close callbacks: 一些关闭的回调函数，如：socket.on('close', ...)  
+
+   一般来说，setImmediate会在setTimeout之前执行，如下：
+   ```js
+   console.log('outer');
+   setTimeout(() => {
+   setTimeout(() => {
+      console.log('setTimeout');
+   }, 0);
+   setImmediate(() => {
+      console.log('setImmediate');
+   });
+   }, 0);
+   ```
+   其执行顺序为：
+
+   1. 外层是一个setTimeout，所以执行它的回调的时候已经在timers阶段了
+   2. 处理里面的setTimeout，因为本次循环的timers正在执行，所以其回调其实加到了下个timers阶段
+   3. 处理里面的setImmediate，将它的回调加入check阶段的队列
+   4. 外层timers阶段执行完，进入pending callbacks，idle, prepare，poll，这几个队列都是空的，所以继续往下
+   5. 到了check阶段，发现了setImmediate的回调，拿出来执行
+   6. 然后是close callbacks，队列是空的，跳过
+   7. 又是timers阶段，执行console.log('setTimeout')
+   8. 但是，如果当前执行环境不是timers阶段，就不一定了。  
+   顺便科普一下Node里面对setTimeout的特殊处理：setTimeout(fn, 0)会被强制改为setTimeout(fn, 1)。
+
+   看看下面的例子：
+   ```js
+   setTimeout(() => {
+   console.log('setTimeout');
+   }, 0);
+
+   setImmediate(() => {
+   console.log('setImmediate');
+   });
+   ```
+
+   其执行顺序为：
+
+   1. 遇到setTimeout，虽然设置的是0毫秒触发，但是被node.js强制改为1毫秒，塞入times阶段
+   2. 遇到setImmediate塞入check阶段
+   3. 同步代码执行完毕，进入Event Loop
+   4. 结论：**先进入times阶段，检查当前时间过去了1毫秒没有，如果过了1毫秒，满足setTimeout条件，执行回调，如果没过1毫秒，跳过
+   跳过空的阶段，进入check阶段，执行setImmediate回调**  
+   可见，1毫秒是个关键点，所以在上面的例子中，setImmediate不一定在setTimeout之前执行了。
+
 -  js异步都有哪些，延伸 `Promise.all`, `Promise.any` 和 `Promise.race` 的[实现](https://github.com/YvetteLau/Blog/issues/2)和用法  
    + promise.all中的执行顺序是并行的，但是会等全部完成的结果传递给then
    + 执行顺序，promise是then方法调用之后才会执行吗？还是从创建那一刻就开始执行？ promise从创建那一刻就开始执行，只是把结果传递给了then，then与promise的执行无关。
