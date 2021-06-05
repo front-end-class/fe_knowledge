@@ -1099,7 +1099,27 @@
       }
    }
    ```
-
+-  通过子节点递归找父节点
+   ```js
+   const findParent = (childrenId, arr, path) => {
+    if (path === undefined) {
+      path = []
+    }
+    for (let i = 0; i < arr.length; i++) {
+      let tmpPath = path.concat();
+      tmpPath.push(arr[i]);
+      if (childrenId == arr[i].id) {
+        return tmpPath
+      }
+      if (arr[i].children) {
+        let findResult = findParent(childrenId, arr[i].children, tmpPath);
+        if (findResult) {
+          return findResult
+        }
+      }
+    }
+   }
+   ```
 
 
 
