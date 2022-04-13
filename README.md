@@ -679,6 +679,12 @@
 -  [网页性能提升5倍 — 构建优化篇](https://mp.weixin.qq.com/s?__biz=Mzg2NDAzMjE5NQ==&mid=2247487514&idx=1&sn=357eed76ec82c1beb0a30a5e8e2008fb&chksm=ce6ed4b6f9195da0870d343b7efd3d13fd2e8e25ef9ddc5a400cd9a002312c07c7d095964613&scene=178&cur_album_id=1403155327595495424#rd)
 -  [从Mixin到HOC再到Hook](https://mp.weixin.qq.com/s?__biz=Mzg2NDAzMjE5NQ==&mid=2247484193&idx=1&sn=0c152afb3566f2b600b0e218d5d24017&chksm=ce6ec78df9194e9b3e0e4f18706fd84be22f0f84d1e7554892e169a30265c6fa154731c1c7a3&scene=21#wechat_redirect)
 -  [轻烤 React 核心机制：React Fiber 与 Reconciliation](https://juejin.cn/post/6891242214324699143)
+-  [深入理解Redux Middleware](https://mp.weixin.qq.com/s/3yoHo6UXI2VOPO9zWI2aCQ)
+-  [理解redux-thunk](https://zhuanlan.zhihu.com/p/85403048)
+-  [redux-saga文档](https://redux-saga-in-chinese.js.org/)
+-  [redux-saga入门](https://zhuanlan.zhihu.com/p/85518538)
+-  [Dvajs](https://dvajs.com/guide/)
+
 
 
 
@@ -1120,6 +1126,25 @@
     }
    }
    ```
+-  compose函数
+   ```js
+   export default function compose(...funcs) {
+     if (funcs.length === 0) {
+       returnarg => arg
+     }
+
+     if (funcs.length === 1) {
+       return funcs[0]
+     }
+
+     return funcs.reduce(function reducer(a, b) {
+       return function (...args) {
+         return a(b(...args))
+       }
+     })
+   }
+   // 函数依次从右向左执行
+   ```
 
 
 
@@ -1130,8 +1155,7 @@
 -  [小工具实现更新本地iconfont](https://github.com/xianzhiyun/iconfont-script)
 -  [微信小程序工程化之持续集成方案](https://zhuanlan.zhihu.com/p/89055847)
 -  [小程序多端编译原理](https://juejin.cn/post/6844904094981685262)
--  [Electron + Puppeteer + Robotjs 实现工作自动化
-神说要有光](https://zhuanlan.zhihu.com/p/197737856)
+-  [Electron + Puppeteer + Robotjs 实现工作自动化](https://zhuanlan.zhihu.com/p/197737856)
 -  [VuePress + Travis CI + Github Pages 全自动上线文档](https://juejin.cn/post/6844903869558816781)
 
 
