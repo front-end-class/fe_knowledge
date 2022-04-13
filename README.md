@@ -683,7 +683,7 @@
 -  [理解redux-thunk](https://zhuanlan.zhihu.com/p/85403048)
 -  [redux-saga文档](https://redux-saga-in-chinese.js.org/)
 -  [redux-saga入门](https://zhuanlan.zhihu.com/p/85518538)
--  [Dvajs](https://dvajs.com/guide/)
+-  [dvajs文档](https://dvajs.com/guide/)
 
 
 
