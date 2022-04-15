@@ -684,6 +684,7 @@
 -  [redux-saga文档](https://redux-saga-in-chinese.js.org/)
 -  [redux-saga入门](https://zhuanlan.zhihu.com/p/85518538)
 -  [dvajs文档](https://dvajs.com/guide/)
+-  [浅析redux-saga实现原理](https://zhuanlan.zhihu.com/p/30098155)
 
 
 
