@@ -1208,6 +1208,8 @@
 -  [Sentry 部署应用实践](https://segmentfault.com/a/1190000021602782)
 
 
+## 前端性能
+-  [新一代性能指标 Web Vitals](https://web.dev/vitals/)
 
 ## 脚手架
 -  [如何搭建一个成熟的脚手架](https://github.com/yokiyokiyoki/ds-cli)
