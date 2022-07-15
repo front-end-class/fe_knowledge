@@ -685,6 +685,10 @@
 -  [redux-saga入门](https://zhuanlan.zhihu.com/p/85518538)
 -  [dvajs文档](https://dvajs.com/guide/)
 -  [浅析redux-saga实现原理](https://zhuanlan.zhihu.com/p/30098155)
+-  [useLayoutEffect和useEffect的区别](https://github.com/yaofly2012/note/issues/149)
+   + useLayoutEffect和componentDidMount和componentDidUpdate触发时机一致（都在在DOM修改后且浏览器渲染之前）；
+   + useLayoutEffect要比useEffect更早的触发执行；
+   + useLayoutEffect会阻塞浏览器渲染，切记执行同步的耗时操作。
 
 
 
