@@ -689,7 +689,13 @@
    + useLayoutEffect和componentDidMount和componentDidUpdate触发时机一致（都在在DOM修改后且浏览器渲染之前）；
    + useLayoutEffect要比useEffect更早的触发执行；
    + useLayoutEffect会阻塞浏览器渲染，切记执行同步的耗时操作。
-
+-  useMemo 和 useCallback的共同和区别
+   + useMemo 和 useCallback 接收的参数都是一样，第一个参数为回调，第二个参数为要依赖的数据
+   + 共同作用：
+     + 1.仅仅 依赖数据 发生变化, 才会重新计算结果，也就是起到缓存的作用。
+   + 两者区别：
+     + 1.useMemo 计算结果是 return 回来的值, 主要用于缓存计算结果的值，类似Vue Computed，应用场景如： 需要计算的状态
+     + 2.useCallback 计算结果是 函数, 主要用于 缓存函数，应用场景如: 需要缓存的函数，因为函数式组件每次任何一个 state 的变化 整个组件 都会被重新刷新，一些函数是没有必要被重新刷新的，此时就应该缓存起来，提高性能，和减少资源浪费。
 
 
 
