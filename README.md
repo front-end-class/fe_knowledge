@@ -685,10 +685,11 @@
 -  [redux-saga入门](https://zhuanlan.zhihu.com/p/85518538)
 -  [dvajs文档](https://dvajs.com/guide/)
 -  [浅析redux-saga实现原理](https://zhuanlan.zhihu.com/p/30098155)
--  [useLayoutEffect和useEffect的区别](https://github.com/yaofly2012/note/issues/149)
+-  [useInsertionEffect，useLayoutEffect和useEffect的区别](https://juejin.cn/post/7118937685653192735#heading-11)
    + useLayoutEffect和componentDidMount和componentDidUpdate触发时机一致（都在在DOM修改后且浏览器渲染之前）；
    + useLayoutEffect要比useEffect更早的触发执行；首先 useLayoutEffect 是在 DOM 更新之后，浏览器绘制之前，这样可以方便修改 DOM，获取 DOM 信息，这样浏览器只会绘制一次，如果修改 DOM 布局放在 useEffect ，那 useEffect 执行是在浏览器绘制视图之后，接下来又改 DOM ，就可能会导致浏览器再次回流和重绘。而且由于两次绘制，视图上可能会造成闪现突兀的效果。
    + useLayoutEffect会阻塞浏览器渲染，切记执行同步的耗时操作。
+   + useInsertionEffect是v18新增的api，useInsertionEffect 的执行时机要比 useLayoutEffect 提前，useLayoutEffect 执行的时候 DOM 已经更新了，但是在 useInsertionEffect 的执行的时候，DOM 还没有更新。本质上 useInsertionEffect 主要是解决 CSS-in-JS 在渲染中注入样式的性能问题。这个 hooks 主要是应用于这个场景，在其他场景下 React 不期望用这个 hooks 。
 -  useMemo 和 useCallback的共同和区别
    + useMemo 和 useCallback 接收的参数都是一样，第一个参数为回调，第二个参数为要依赖的数据
    + 共同作用：
