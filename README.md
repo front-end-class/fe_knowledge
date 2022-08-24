@@ -1281,3 +1281,10 @@
    + 降低开发系统的成本（不需要每个业务都开发一次登录系统和用户状态控制）；
    总的来说，大中型web应用，SSO可以带来很多好处，缺点却很少。
 
+
+## 英语学习考试
+-  [Rachel's English 美语发音](https://www.youtube.com/channel/UCvn_XCl_mgQmt3sD753zdJA)
+-  [engVid综合性的免费英语学习网站](https://www.youtube.com/user/engvidenglish)，非常强大，很多老师很多视频
+-  [Tarle Speech & Language Services](https://www.youtube.com/channel/UCXqIlSRBuqbq41hfl7cwGWw) 很多单词发音对比视频
+-  [SPEAK ENGLISH with SOZO-X 发音注重口型，最后有小 quiz](https://www.youtube.com/channel/UCL5E5b5Ig88hVA8paYNcYLg)
+
