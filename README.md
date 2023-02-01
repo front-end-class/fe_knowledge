@@ -1189,6 +1189,7 @@
 -  [verdaccio私库](https://verdaccio.org/docs/zh-CN)
 -  [Carbon美化代码片段](https://carbon.now.sh/)
 -  [SwitchHosts host管理工具](https://github.com/oldj/SwitchHosts)
+-  [fig](https://fig.io/) - 一个可以在你的终端中添加自动补全命令的提示工具
 
 
 ## 规范工具
